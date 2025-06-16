@@ -1,0 +1,396 @@
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+    <component id="Process">
+    <param name="x" type="real" local="true" d1="1" d2="1" dynamics="any" />
+    <param name="id" type="real" local="false" d1="1" d2="1" dynamics="const" />
+    <param name="A" type="real" local="false" d1="1" d2="1" dynamics="const" />
+    <param name="B" type="real" local="false" d1="1" d2="1" dynamics="const" />
+    <param name="v1" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+    <param name="v2" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+    <location id="1" name="L1">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="2" name="L2">
+      <invariant>x &lt;= A</invariant>
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="3" name="L3">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="4" name="L4">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="5" name="L5">
+      <invariant>x &lt;= A</invariant>
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="6" name="L6">
+      <invariant>x &lt;= A</invariant>
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="7" name="CS7">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="8" name="L8">
+      <invariant>x &lt;= A</invariant>
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <location id="9" name="L9">
+      <invariant>x &lt;= A</invariant>
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; v1' == 0 &amp; v2' == 0</flow>
+    </location>
+    <transition source="1" target="2">
+      <label>test0</label>
+      <guard>v1 == 0</guard>
+      <assignment>x' = 0 &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="2" target="3">
+      <label>seti</label>
+      <assignment>x' = 0 &amp; v1' = id &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="3" target="4">
+      <label>testi</label>
+      <guard>x &gt; B &amp; v1 == id</guard>
+      <assignment>x' = x &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="4" target="5">
+      <label>testfalse</label>
+      <guard>v2 == 0</guard>
+      <assignment>x' = 0 &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="5" target="6">
+      <label>settrue</label>
+      <assignment>x' = 0 &amp; v1' = v1 &amp; v2' = 1</assignment>
+    </transition>
+    <transition source="6" target="7">
+      <label>enter</label>
+      <guard>v1 == id</guard>
+      <assignment>x' = x &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="3" target="1">
+      <label>back1</label>
+      <guard>v1 != id</guard>
+      <assignment>x' = x &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="4" target="1">
+      <label>back2</label>
+      <guard>v2 == 1</guard>
+      <assignment>x' = x &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="6" target="1">
+      <label>back3</label>
+      <guard>v1 != id</guard>
+      <assignment>x' = x &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="7" target="8">
+      <label>leave</label>
+      <assignment>x' = 0 &amp; v1' = v1 &amp; v2' = v2</assignment>
+    </transition>
+    <transition source="8" target="9">
+      <label>reset2</label>
+      <assignment>x' = x &amp; v1' = v1 &amp; v2' = 0</assignment>
+    </transition>
+    <transition source="9" target="1">
+      <label>reset1</label>
+      <assignment>x' = x &amp; v1' = 0 &amp; v2' = v2</assignment>
+    </transition>
+  </component>
+  <component id="sys">
+    <param name="v1" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+    <param name="v2" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+    <bind component="Process" as="p1">
+      <map key="id">1</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p2">
+      <map key="id">2</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p3">
+      <map key="id">3</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p4">
+      <map key="id">4</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p5">
+      <map key="id">5</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p6">
+      <map key="id">6</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p7">
+      <map key="id">7</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p8">
+      <map key="id">8</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p9">
+      <map key="id">9</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p10">
+      <map key="id">10</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p11">
+      <map key="id">11</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p12">
+      <map key="id">12</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p13">
+      <map key="id">13</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p14">
+      <map key="id">14</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p15">
+      <map key="id">15</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p16">
+      <map key="id">16</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p17">
+      <map key="id">17</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p18">
+      <map key="id">18</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p19">
+      <map key="id">19</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p20">
+      <map key="id">20</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p21">
+      <map key="id">21</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p22">
+      <map key="id">22</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p23">
+      <map key="id">23</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p24">
+      <map key="id">24</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p25">
+      <map key="id">25</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p26">
+      <map key="id">26</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p27">
+      <map key="id">27</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p28">
+      <map key="id">28</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p29">
+      <map key="id">29</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p30">
+      <map key="id">30</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p31">
+      <map key="id">31</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p32">
+      <map key="id">32</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p33">
+      <map key="id">33</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p34">
+      <map key="id">34</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p35">
+      <map key="id">35</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p36">
+      <map key="id">36</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p37">
+      <map key="id">37</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p38">
+      <map key="id">38</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p39">
+      <map key="id">39</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p40">
+      <map key="id">40</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p41">
+      <map key="id">41</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p42">
+      <map key="id">42</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p43">
+      <map key="id">43</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p44">
+      <map key="id">44</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p45">
+      <map key="id">45</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p46">
+      <map key="id">46</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p47">
+      <map key="id">47</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p48">
+      <map key="id">48</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p49">
+      <map key="id">49</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p50">
+      <map key="id">50</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p51">
+      <map key="id">51</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p52">
+      <map key="id">52</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p53">
+      <map key="id">53</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p54">
+      <map key="id">54</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p55">
+      <map key="id">55</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p56">
+      <map key="id">56</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p57">
+      <map key="id">57</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p58">
+      <map key="id">58</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+    <bind component="Process" as="p59">
+      <map key="id">59</map>
+      <map key="v1">v1</map>
+      <map key="v2">v2</map>
+    </bind>
+</component>
+</sspaceex>

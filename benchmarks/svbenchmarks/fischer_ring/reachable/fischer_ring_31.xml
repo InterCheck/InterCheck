@@ -1,0 +1,268 @@
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+    <component id="Process">
+    <param name="x" type="real" local="true" d1="1" d2="1" dynamics="any" />
+    <param name="id" type="real" local="false" d1="1" d2="1" dynamics="const" />
+    <param name="svl" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+    <param name="svr" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+    <location id="1" name="loc1">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1  &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+    <location id="2" name="loc2">
+      <invariant>x &lt;= 1</invariant>
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+    <location id="3" name="loc4">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1  &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+    <location id="4" name="loc3">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+    <location id="5" name="loc5">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+    <location id="6" name="loc6">
+    	<invariant>x &lt;= 1</invariant>
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+    <location id="7" name="loc7">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+     <location id="8" name="loc8">
+      <flow>x' &lt;= 2.3 &amp; x' &gt;= 1.1 &amp; svl' == 0 &amp; svr'==0</flow>
+    </location>
+    <transition source="1" target="2">
+      <label>testl0</label>
+      <guard>svl == 0</guard>
+      <assignment>x = 0 &amp; svl = svl &amp; svr =svr</assignment>
+    </transition>
+    <transition source="2" target="4">
+      <label>setli</label>
+      <assignment>x = 0 &amp; svl = id &amp; svr =svr</assignment>
+    </transition>
+    <transition source="4" target="3">
+      <label>testli</label>
+      <guard>x &gt; 2 &amp; svl == id</guard>
+      <assignment>x = 0 &amp; svl = svl &amp; svr =svr</assignment>
+    </transition>
+    <transition source="3" target="5">
+      <label>t</label>
+      <assignment>x = 0 &amp; svl = svl &amp; svr =svr</assignment>
+    </transition>
+    <transition source="5" target="6">
+      <label>testr0</label>
+      <guard>svr==0</guard>
+      <assignment>x = 0 &amp; svl = svl &amp; svr =svr</assignment>
+    </transition>
+    <transition source="4" target="1">
+      <label>testlni</label>
+      <guard>x &gt; 2 &amp; svl != id</guard>
+      <assignment>x = 0 &amp; svl = svl &amp; svr =svr</assignment>
+    </transition>
+    <transition source="6" target="7">
+      <label>setri</label>
+      <assignment>x = 0 &amp; svr = id &amp; svl = svl</assignment>
+    </transition>
+    <transition source="7" target="8">
+      <label>testri</label>
+      <guard>x &gt; 2 &amp;svr==id</guard>
+      <assignment>x = 0 &amp; svl = svl &amp; svr =svr</assignment>
+    </transition>
+    <transition source="7" target="5">
+      <label>testrni</label>
+      <guard>x &gt; 2 &amp; svr != id</guard>
+      <assignment>x = 0 &amp; svl = svl &amp; svr =svr</assignment>
+    </transition>
+    <transition source="8" target="1">
+      <label>set0</label>
+      <assignment>x = 0 &amp; svl = 0 &amp; svr=0</assignment>
+    </transition>
+  </component>
+  <component id="sys">
+  <param name="sv0" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv1" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv2" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv3" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv4" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv5" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv6" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv7" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv8" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv9" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv10" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv11" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv12" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv13" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv14" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv15" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv16" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv17" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv18" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv19" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv20" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv21" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv22" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv23" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv24" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv25" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv26" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv27" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv28" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv29" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+  <param name="sv30" type="real" local="false" d1="1" d2="1" dynamics="any" controlled="false" />
+ <bind component="Process" as="p1" x="334.0" y="65.0">
+    <map key="id">1</map>
+    <map key="svl">sv0</map>
+    <map key="svr">sv1</map>
+ </bind>
+ <bind component="Process" as="p2" x="334.0" y="65.0">
+    <map key="id">2</map>
+    <map key="svl">sv1</map>
+    <map key="svr">sv2</map>
+ </bind>
+ <bind component="Process" as="p3" x="334.0" y="65.0">
+    <map key="id">3</map>
+    <map key="svl">sv2</map>
+    <map key="svr">sv3</map>
+ </bind>
+ <bind component="Process" as="p4" x="334.0" y="65.0">
+    <map key="id">4</map>
+    <map key="svl">sv3</map>
+    <map key="svr">sv4</map>
+ </bind>
+ <bind component="Process" as="p5" x="334.0" y="65.0">
+    <map key="id">5</map>
+    <map key="svl">sv4</map>
+    <map key="svr">sv5</map>
+ </bind>
+ <bind component="Process" as="p6" x="334.0" y="65.0">
+    <map key="id">6</map>
+    <map key="svl">sv5</map>
+    <map key="svr">sv6</map>
+ </bind>
+ <bind component="Process" as="p7" x="334.0" y="65.0">
+    <map key="id">7</map>
+    <map key="svl">sv6</map>
+    <map key="svr">sv7</map>
+ </bind>
+ <bind component="Process" as="p8" x="334.0" y="65.0">
+    <map key="id">8</map>
+    <map key="svl">sv7</map>
+    <map key="svr">sv8</map>
+ </bind>
+ <bind component="Process" as="p9" x="334.0" y="65.0">
+    <map key="id">9</map>
+    <map key="svl">sv8</map>
+    <map key="svr">sv9</map>
+ </bind>
+ <bind component="Process" as="p10" x="334.0" y="65.0">
+    <map key="id">10</map>
+    <map key="svl">sv9</map>
+    <map key="svr">sv10</map>
+ </bind>
+ <bind component="Process" as="p11" x="334.0" y="65.0">
+    <map key="id">11</map>
+    <map key="svl">sv10</map>
+    <map key="svr">sv11</map>
+ </bind>
+ <bind component="Process" as="p12" x="334.0" y="65.0">
+    <map key="id">12</map>
+    <map key="svl">sv11</map>
+    <map key="svr">sv12</map>
+ </bind>
+ <bind component="Process" as="p13" x="334.0" y="65.0">
+    <map key="id">13</map>
+    <map key="svl">sv12</map>
+    <map key="svr">sv13</map>
+ </bind>
+ <bind component="Process" as="p14" x="334.0" y="65.0">
+    <map key="id">14</map>
+    <map key="svl">sv13</map>
+    <map key="svr">sv14</map>
+ </bind>
+ <bind component="Process" as="p15" x="334.0" y="65.0">
+    <map key="id">15</map>
+    <map key="svl">sv14</map>
+    <map key="svr">sv15</map>
+ </bind>
+ <bind component="Process" as="p16" x="334.0" y="65.0">
+    <map key="id">16</map>
+    <map key="svl">sv15</map>
+    <map key="svr">sv16</map>
+ </bind>
+ <bind component="Process" as="p17" x="334.0" y="65.0">
+    <map key="id">17</map>
+    <map key="svl">sv16</map>
+    <map key="svr">sv17</map>
+ </bind>
+ <bind component="Process" as="p18" x="334.0" y="65.0">
+    <map key="id">18</map>
+    <map key="svl">sv17</map>
+    <map key="svr">sv18</map>
+ </bind>
+ <bind component="Process" as="p19" x="334.0" y="65.0">
+    <map key="id">19</map>
+    <map key="svl">sv18</map>
+    <map key="svr">sv19</map>
+ </bind>
+ <bind component="Process" as="p20" x="334.0" y="65.0">
+    <map key="id">20</map>
+    <map key="svl">sv19</map>
+    <map key="svr">sv20</map>
+ </bind>
+ <bind component="Process" as="p21" x="334.0" y="65.0">
+    <map key="id">21</map>
+    <map key="svl">sv20</map>
+    <map key="svr">sv21</map>
+ </bind>
+ <bind component="Process" as="p22" x="334.0" y="65.0">
+    <map key="id">22</map>
+    <map key="svl">sv21</map>
+    <map key="svr">sv22</map>
+ </bind>
+ <bind component="Process" as="p23" x="334.0" y="65.0">
+    <map key="id">23</map>
+    <map key="svl">sv22</map>
+    <map key="svr">sv23</map>
+ </bind>
+ <bind component="Process" as="p24" x="334.0" y="65.0">
+    <map key="id">24</map>
+    <map key="svl">sv23</map>
+    <map key="svr">sv24</map>
+ </bind>
+ <bind component="Process" as="p25" x="334.0" y="65.0">
+    <map key="id">25</map>
+    <map key="svl">sv24</map>
+    <map key="svr">sv25</map>
+ </bind>
+ <bind component="Process" as="p26" x="334.0" y="65.0">
+    <map key="id">26</map>
+    <map key="svl">sv25</map>
+    <map key="svr">sv26</map>
+ </bind>
+ <bind component="Process" as="p27" x="334.0" y="65.0">
+    <map key="id">27</map>
+    <map key="svl">sv26</map>
+    <map key="svr">sv27</map>
+ </bind>
+ <bind component="Process" as="p28" x="334.0" y="65.0">
+    <map key="id">28</map>
+    <map key="svl">sv27</map>
+    <map key="svr">sv28</map>
+ </bind>
+ <bind component="Process" as="p29" x="334.0" y="65.0">
+    <map key="id">29</map>
+    <map key="svl">sv28</map>
+    <map key="svr">sv29</map>
+ </bind>
+ <bind component="Process" as="p30" x="334.0" y="65.0">
+    <map key="id">30</map>
+    <map key="svl">sv29</map>
+    <map key="svr">sv30</map>
+ </bind>
+ <bind component="Process" as="p31" x="334.0" y="65.0">
+    <map key="id">31</map>
+    <map key="svl">sv30</map>
+    <map key="svr">sv0</map>
+ </bind>
+</component>
+</sspaceex>
