@@ -79,33 +79,33 @@ os.system("rm -f " + resultdir+"*_result.txt")
 
 dic = {'InterCheck': ' -interaction -nspread ',  'InterCheck-trg': ' -trg -nspread '}
 
-# map=[]
-# for i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20]:
-# 	map.append((i, 6))
-# test("lynch_", '''Lynch/unreachable/''', map, dic)
-# test("lynch_", '''Lynch/reachable/''', map, dic)
+map=[]
+for i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20]:
+	map.append((i, 6))
+test("lynch_", '''Lynch/unreachable/''', map, dic)
+test("lynch_", '''Lynch/reachable/''', map, dic)
 
-# map=[]
-# for i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20]:
-# 	map.append((i, 2))
-# test("acc_", '''ACC/unreachable/''', map, dic)
-# test("acc_", '''ACC/reachable/''', map, dic)
+map=[]
+for i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20]:
+	map.append((i, 2))
+test("acc_", '''ACC/unreachable/''', map, dic)
+test("acc_", '''ACC/reachable/''', map, dic)
 
-# map=[]
-# for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
-# 	map.append((i, 7))
-# test("ETCS_", '''ETCS/reachable/''', map, dic)
+map=[]
+for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+	map.append((i, 7))
+test("ETCS_", '''ETCS/reachable/''', map, dic)
 
-# map=[]
-# for i in [1, 2, 3, 4, 5, 6]:
-# 	map.append((i, 10))
-# test("ETCS_", '''ETCS/unreachable/''', map, dic)
+map=[]
+for i in [1, 2, 3, 4, 5, 6]:
+	map.append((i, 10))
+test("ETCS_", '''ETCS/unreachable/''', map, dic)
 
-# map=[]
-# for i in [2, 3, 4, 5, 6, 7, 8]:
-# 	map.append((i, 6))
-# test("fischer_", '''fischer/unreachable/''', map, dic)
-# test("fischer_", '''fischer/reachable/''', map, dic)
+map=[]
+for i in [2, 3, 4, 5, 6, 7, 8]:
+	map.append((i, 6))
+test("fischer_", '''fischer/unreachable/''', map, dic)
+test("fischer_", '''fischer/reachable/''', map, dic)
 
 map=[]
 for i in [3,4,5,6,7,8,9,10,11,12]:

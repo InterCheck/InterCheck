@@ -2,12 +2,16 @@
 
 This repository contains the code, benchmark instances,  executables and instructions to reproduce the experimental results in submission #39 to EMSOFT '25.
 
+
+
 ## Environment
 
 All experiments in the paper are conducted on a workstation (Intel Core i5-12500 CPU 3.4GHz, 16 GB RAM, and UBUNTU 20.04). The time limit for experiments is set to 1000 s, and the memory usage limit is set to 4 GB.
 All experiments will take about 4 hours.
 
 Finally, please note that the executables provided here are available solely for the purpose of reproducing the experiments of the above paper.
+
+
 
 ## Instructions
 
@@ -16,7 +20,7 @@ Before running run.py you have to make sure "Python" and "runlim" are installed.
 If not, use the following command to install:
 
 ```
- sudo apt-get install runlim python
+sudo apt-get install runlim python3
 ```
 
 
