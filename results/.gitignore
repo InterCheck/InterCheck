@@ -1,6 +1,0 @@
-benchmarks/slbenchmarks/result*
-benchmarks/svbenchmarks/result*
-results/*
-*.log
-*.runlim
-
