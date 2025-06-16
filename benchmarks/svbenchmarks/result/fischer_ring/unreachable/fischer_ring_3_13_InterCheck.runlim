@@ -1,0 +1,24 @@
+[runlim] version:		1.10
+[runlim] time limit:		1000 seconds
+[runlim] real time limit:	1000 seconds
+[runlim] space limit:		4096 MB
+[runlim] argv[0]:		../../InterCheck
+[runlim] argv[1]:		-t
+[runlim] argv[2]:		-p
+[runlim] argv[3]:		-solver
+[runlim] argv[4]:		cmsat
+[runlim] argv[5]:		-interaction
+[runlim] argv[6]:		-nspread
+[runlim] argv[7]:		fischer_ring/unreachable/fischer_ring_3.xml
+[runlim] argv[8]:		fischer_ring/unreachable/fischer_ring_3.cfg
+[runlim] argv[9]:		13
+[runlim] start:			Mon Jun 16 16:32:01 2025
+[runlim] main pid:		892568
+[runlim] end:			Mon Jun 16 16:32:07 2025
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] real:			6.26 seconds
+[runlim] time:			5.80 seconds
+[runlim] space:			29.5 MB
+[runlim] samples:		58

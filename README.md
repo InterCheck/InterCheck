@@ -14,7 +14,12 @@ Finally, please note that the executables provided here are available solely for
 For reproducing the results of the paper, the script "run.py" should be run *FROM this directory*.
 Before running run.py you have to make sure "Python" and "runlim" are installed.
 If not, use the following command to install:
-    sudo apt-get install runlim python
+
+```
+ sudo apt-get install runlim python
+```
+
+
 
 ## Directory Structure 
 

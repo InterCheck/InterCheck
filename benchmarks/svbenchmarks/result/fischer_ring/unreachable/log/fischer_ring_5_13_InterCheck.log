@@ -1,0 +1,4116 @@
+Model File : fischer_ring/unreachable/fischer_ring_5.xml
+Spec  File : fischer_ring/unreachable/fischer_ring_5.cfg
+Parsing XML...
+Parsing XML Success
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:129-----------------
+sv0[0][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:142-----------------
+sv0[0][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:129-----------------
+sv1[1][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:142-----------------
+sv1[1][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:129-----------------
+sv2[2][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:142-----------------
+sv2[2][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:129-----------------
+sv3[3][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:142-----------------
+sv3[3][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:129-----------------
+sv4[4][null][discrete]
+------------removeFakeShareVaribles()------------src/parser/AutomatonParser.cpp:142-----------------
+sv4[4][null][discrete]
+------------setReachSpec()------------src/automata/Automaton.cpp:451-----------------
+loc(p1) == loc8&loc(p2) == loc8&loc(p3) == loc8&loc(p4) == loc8&loc(p5) == loc8
+------------generateExtraTransition()------------src/automata/Automaton.cpp:580-----------------
+p1.x[5]{p1}
+------------generateExtraTransition()------------src/automata/Automaton.cpp:580-----------------
+p2.x[6]{p2}
+------------generateExtraTransition()------------src/automata/Automaton.cpp:580-----------------
+p3.x[7]{p3}
+------------generateExtraTransition()------------src/automata/Automaton.cpp:580-----------------
+p4.x[8]{p4}
+------------generateExtraTransition()------------src/automata/Automaton.cpp:580-----------------
+p5.x[9]{p5}
+*******************ComposedAutomata Information*********************
+Automaton:sys
+variable:sv0[0][null][discrete]
+variable:sv1[1][null][discrete]
+variable:sv2[2][null][discrete]
+variable:sv3[3][null][discrete]
+variable:sv4[4][null][discrete]
+variable:p1.x[5]{p1}
+variable:p2.x[6]{p2}
+variable:p3.x[7]{p3}
+variable:p4.x[8]{p4}
+variable:p5.x[9]{p5}
+
+shared variable:sv0[0]
+used Automaton:
+p1
+p5
+read Transition:
+p5.testri[p5]
+p5.testrgi[p5]
+p5.testr0[p5]
+p1.testl0[p1]
+p1.testli[p1]
+p1.testlni[p1]
+written Transition:
+p5.set0[p5]
+p5.setri[p5]
+p1.setli[p1]
+p1.set0[p1]
+used Transition:
+p5.set0[p5]
+p5.setri[p5]
+p5.testri[p5]
+p5.testrgi[p5]
+p5.testr0[p5]
+p1.setli[p1]
+p1.testl0[p1]
+p1.testli[p1]
+p1.testlni[p1]
+p1.set0[p1]
+read State:
+
+shared variable:sv1[1]
+used Automaton:
+p1
+p2
+read Transition:
+p1.testr0[p1]
+p1.testri[p1]
+p1.testrgi[p1]
+p2.testl0[p2]
+p2.testli[p2]
+p2.testlni[p2]
+written Transition:
+p1.setri[p1]
+p1.set0[p1]
+p2.setli[p2]
+p2.set0[p2]
+used Transition:
+p1.testr0[p1]
+p1.setri[p1]
+p1.testri[p1]
+p1.testrgi[p1]
+p1.set0[p1]
+p2.testl0[p2]
+p2.setli[p2]
+p2.testli[p2]
+p2.testlni[p2]
+p2.set0[p2]
+read State:
+
+shared variable:sv2[2]
+used Automaton:
+p2
+p3
+read Transition:
+p2.testr0[p2]
+p2.testri[p2]
+p2.testrgi[p2]
+p3.testl0[p3]
+p3.testli[p3]
+p3.testlni[p3]
+written Transition:
+p2.setri[p2]
+p2.set0[p2]
+p3.setli[p3]
+p3.set0[p3]
+used Transition:
+p2.testr0[p2]
+p2.setri[p2]
+p2.testri[p2]
+p2.testrgi[p2]
+p2.set0[p2]
+p3.testl0[p3]
+p3.setli[p3]
+p3.testli[p3]
+p3.testlni[p3]
+p3.set0[p3]
+read State:
+
+shared variable:sv3[3]
+used Automaton:
+p3
+p4
+read Transition:
+p3.testr0[p3]
+p3.testri[p3]
+p3.testrgi[p3]
+p4.testl0[p4]
+p4.testli[p4]
+p4.testlni[p4]
+written Transition:
+p3.setri[p3]
+p3.set0[p3]
+p4.setli[p4]
+p4.set0[p4]
+used Transition:
+p3.testr0[p3]
+p3.setri[p3]
+p3.testri[p3]
+p3.testrgi[p3]
+p3.set0[p3]
+p4.testl0[p4]
+p4.setli[p4]
+p4.testli[p4]
+p4.testlni[p4]
+p4.set0[p4]
+read State:
+
+shared variable:sv4[4]
+used Automaton:
+p4
+p5
+read Transition:
+p5.testlni[p5]
+p4.testr0[p4]
+p4.testri[p4]
+p4.testrgi[p4]
+p5.testl0[p5]
+p5.testli[p5]
+written Transition:
+p5.set0[p5]
+p4.setri[p4]
+p4.set0[p4]
+p5.setli[p5]
+used Transition:
+p5.set0[p5]
+p5.testlni[p5]
+p4.testr0[p4]
+p4.setri[p4]
+p4.testri[p4]
+p4.testrgi[p4]
+p4.set0[p4]
+p5.testl0[p5]
+p5.setli[p5]
+p5.testli[p5]
+read State:
+
+labels:initial$0
+labels:target$0
+*******************Automaton Information*********************
+Automaton:p1[0]
+variable:p1.x[5]{p1}
+shared variable:sv0[0][null][discrete]
+shared variable:sv1[1][null][discrete]
+State:
+loc1,0
+Invariants:
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.testl0[p1]
+Pre:
+p1.testlni[p1]
+p1.set0[p1]
+initial$0[p1]
+
+State:
+loc2,1
+Invariants:
+( p1.x[5]{p1} <= 1 )
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.setli[p1]
+Pre:
+p1.testl0[p1]
+
+State:
+loc4,2
+Invariants:
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.t[p1]
+Pre:
+p1.testli[p1]
+
+State:
+loc3,3
+Invariants:
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.testli[p1]
+p1.testlni[p1]
+Pre:
+p1.setli[p1]
+
+State:
+loc5,4
+Invariants:
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.testr0[p1]
+Pre:
+p1.t[p1]
+p1.testrgi[p1]
+
+State:
+loc6,5
+Invariants:
+( p1.x[5]{p1} <= 1 )
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.setri[p1]
+Pre:
+p1.testr0[p1]
+
+State:
+loc7,6
+Invariants:
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.testri[p1]
+p1.testrgi[p1]
+Pre:
+p1.setri[p1]
+
+State:
+loc8,7
+Invariants:
+Flows:
+( p1.x[5]{p1}' <= 2.3 )
+( p1.x[5]{p1}' >= 1.1 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+Next:
+p1.set0[p1]
+target$0[p1]
+Pre:
+p1.testri[p1]
+
+State:
+p1$initial,8
+Invariants:
+Flows:
+Next:
+initial$0[p1]
+Pre:
+
+State:
+p1$target,9
+Invariants:
+Flows:
+Next:
+Pre:
+target$0[p1]
+
+Transition:
+p1.testl0(loc1->loc2)
+ID:0
+Guards:
+( sv0[0][null][discrete] = 0 )
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.setli(loc2->loc3)
+ID:1
+Guards:
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = 1 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.testli(loc3->loc4)
+ID:2
+Guards:
+( p1.x[5]{p1} > 3 )
+( sv0[0][null][discrete] = 1 )
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.t(loc4->loc5)
+ID:3
+Guards:
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.testr0(loc5->loc6)
+ID:4
+Guards:
+( sv1[1][null][discrete] = 0 )
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.testlni(loc3->loc1)
+ID:5
+Guards:
+( p1.x[5]{p1} > 3 )
+( sv0[0][null][discrete] != 1 )
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.setri(loc6->loc7)
+ID:6
+Guards:
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv1[1][null][discrete]' = 1 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p1.testri(loc7->loc8)
+ID:7
+Guards:
+( p1.x[5]{p1} > 3 )
+( sv1[1][null][discrete] = 1 )
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.testrgi(loc7->loc5)
+ID:8
+Guards:
+( p1.x[5]{p1} > 3 )
+( sv1[1][null][discrete] != 1 )
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p1.set0(loc8->loc1)
+ID:9
+Guards:
+Resets:
+( p1.x[5]{p1}' = 0 )
+( sv0[0][null][discrete]' = 0 )
+( sv1[1][null][discrete]' = 0 )
+
+Transition:
+initial$0(p1$initial->loc1)
+ID:10
+Guards:
+( p1.x[5]{p1} = 0 )
+Resets:
+( p1.x[5]{p1}' = p1.x[5]{p1} )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+target$0(loc8->p1$target)
+ID:11
+Guards:
+Resets:
+
+related automata:
+p1
+
+*******************Automaton Information*********************
+Automaton:p2[1]
+variable:p2.x[6]{p2}
+shared variable:sv1[1][null][discrete]
+shared variable:sv2[2][null][discrete]
+State:
+loc1,0
+Invariants:
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.testl0[p2]
+Pre:
+p2.testlni[p2]
+p2.set0[p2]
+initial$0[p2]
+
+State:
+loc2,1
+Invariants:
+( p2.x[6]{p2} <= 1 )
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.setli[p2]
+Pre:
+p2.testl0[p2]
+
+State:
+loc4,2
+Invariants:
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.t[p2]
+Pre:
+p2.testli[p2]
+
+State:
+loc3,3
+Invariants:
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.testli[p2]
+p2.testlni[p2]
+Pre:
+p2.setli[p2]
+
+State:
+loc5,4
+Invariants:
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.testr0[p2]
+Pre:
+p2.t[p2]
+p2.testrgi[p2]
+
+State:
+loc6,5
+Invariants:
+( p2.x[6]{p2} <= 1 )
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.setri[p2]
+Pre:
+p2.testr0[p2]
+
+State:
+loc7,6
+Invariants:
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.testri[p2]
+p2.testrgi[p2]
+Pre:
+p2.setri[p2]
+
+State:
+loc8,7
+Invariants:
+Flows:
+( p2.x[6]{p2}' <= 2.3 )
+( p2.x[6]{p2}' >= 1.1 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+Next:
+p2.set0[p2]
+target$0[p2]
+Pre:
+p2.testri[p2]
+
+State:
+p2$initial,8
+Invariants:
+Flows:
+Next:
+initial$0[p2]
+Pre:
+
+State:
+p2$target,9
+Invariants:
+Flows:
+Next:
+Pre:
+target$0[p2]
+
+Transition:
+p2.testl0(loc1->loc2)
+ID:0
+Guards:
+( sv1[1][null][discrete] = 0 )
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.setli(loc2->loc3)
+ID:1
+Guards:
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = 2 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.testli(loc3->loc4)
+ID:2
+Guards:
+( p2.x[6]{p2} > 3 )
+( sv1[1][null][discrete] = 2 )
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.t(loc4->loc5)
+ID:3
+Guards:
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.testr0(loc5->loc6)
+ID:4
+Guards:
+( sv2[2][null][discrete] = 0 )
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.testlni(loc3->loc1)
+ID:5
+Guards:
+( p2.x[6]{p2} > 3 )
+( sv1[1][null][discrete] != 2 )
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.setri(loc6->loc7)
+ID:6
+Guards:
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv2[2][null][discrete]' = 2 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+
+Transition:
+p2.testri(loc7->loc8)
+ID:7
+Guards:
+( p2.x[6]{p2} > 3 )
+( sv2[2][null][discrete] = 2 )
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.testrgi(loc7->loc5)
+ID:8
+Guards:
+( p2.x[6]{p2} > 3 )
+( sv2[2][null][discrete] != 2 )
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p2.set0(loc8->loc1)
+ID:9
+Guards:
+Resets:
+( p2.x[6]{p2}' = 0 )
+( sv1[1][null][discrete]' = 0 )
+( sv2[2][null][discrete]' = 0 )
+
+Transition:
+initial$0(p2$initial->loc1)
+ID:10
+Guards:
+( p2.x[6]{p2} = 0 )
+Resets:
+( p2.x[6]{p2}' = p2.x[6]{p2} )
+( sv1[1][null][discrete]' = sv1[1][null][discrete] )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+target$0(loc8->p2$target)
+ID:11
+Guards:
+Resets:
+
+related automata:
+p2
+
+*******************Automaton Information*********************
+Automaton:p3[2]
+variable:p3.x[7]{p3}
+shared variable:sv2[2][null][discrete]
+shared variable:sv3[3][null][discrete]
+State:
+loc1,0
+Invariants:
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.testl0[p3]
+Pre:
+p3.testlni[p3]
+p3.set0[p3]
+initial$0[p3]
+
+State:
+loc2,1
+Invariants:
+( p3.x[7]{p3} <= 1 )
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.setli[p3]
+Pre:
+p3.testl0[p3]
+
+State:
+loc4,2
+Invariants:
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.t[p3]
+Pre:
+p3.testli[p3]
+
+State:
+loc3,3
+Invariants:
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.testli[p3]
+p3.testlni[p3]
+Pre:
+p3.setli[p3]
+
+State:
+loc5,4
+Invariants:
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.testr0[p3]
+Pre:
+p3.t[p3]
+p3.testrgi[p3]
+
+State:
+loc6,5
+Invariants:
+( p3.x[7]{p3} <= 1 )
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.setri[p3]
+Pre:
+p3.testr0[p3]
+
+State:
+loc7,6
+Invariants:
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.testri[p3]
+p3.testrgi[p3]
+Pre:
+p3.setri[p3]
+
+State:
+loc8,7
+Invariants:
+Flows:
+( p3.x[7]{p3}' <= 2.3 )
+( p3.x[7]{p3}' >= 1.1 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+Next:
+p3.set0[p3]
+target$0[p3]
+Pre:
+p3.testri[p3]
+
+State:
+p3$initial,8
+Invariants:
+Flows:
+Next:
+initial$0[p3]
+Pre:
+
+State:
+p3$target,9
+Invariants:
+Flows:
+Next:
+Pre:
+target$0[p3]
+
+Transition:
+p3.testl0(loc1->loc2)
+ID:0
+Guards:
+( sv2[2][null][discrete] = 0 )
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.setli(loc2->loc3)
+ID:1
+Guards:
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = 3 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.testli(loc3->loc4)
+ID:2
+Guards:
+( p3.x[7]{p3} > 3 )
+( sv2[2][null][discrete] = 3 )
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.t(loc4->loc5)
+ID:3
+Guards:
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.testr0(loc5->loc6)
+ID:4
+Guards:
+( sv3[3][null][discrete] = 0 )
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.testlni(loc3->loc1)
+ID:5
+Guards:
+( p3.x[7]{p3} > 3 )
+( sv2[2][null][discrete] != 3 )
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.setri(loc6->loc7)
+ID:6
+Guards:
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv3[3][null][discrete]' = 3 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+
+Transition:
+p3.testri(loc7->loc8)
+ID:7
+Guards:
+( p3.x[7]{p3} > 3 )
+( sv3[3][null][discrete] = 3 )
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.testrgi(loc7->loc5)
+ID:8
+Guards:
+( p3.x[7]{p3} > 3 )
+( sv3[3][null][discrete] != 3 )
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p3.set0(loc8->loc1)
+ID:9
+Guards:
+Resets:
+( p3.x[7]{p3}' = 0 )
+( sv2[2][null][discrete]' = 0 )
+( sv3[3][null][discrete]' = 0 )
+
+Transition:
+initial$0(p3$initial->loc1)
+ID:10
+Guards:
+( p3.x[7]{p3} = 0 )
+Resets:
+( p3.x[7]{p3}' = p3.x[7]{p3} )
+( sv2[2][null][discrete]' = sv2[2][null][discrete] )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+target$0(loc8->p3$target)
+ID:11
+Guards:
+Resets:
+
+related automata:
+p3
+
+*******************Automaton Information*********************
+Automaton:p4[3]
+variable:p4.x[8]{p4}
+shared variable:sv3[3][null][discrete]
+shared variable:sv4[4][null][discrete]
+State:
+loc1,0
+Invariants:
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.testl0[p4]
+Pre:
+p4.testlni[p4]
+p4.set0[p4]
+initial$0[p4]
+
+State:
+loc2,1
+Invariants:
+( p4.x[8]{p4} <= 1 )
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.setli[p4]
+Pre:
+p4.testl0[p4]
+
+State:
+loc4,2
+Invariants:
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.t[p4]
+Pre:
+p4.testli[p4]
+
+State:
+loc3,3
+Invariants:
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.testli[p4]
+p4.testlni[p4]
+Pre:
+p4.setli[p4]
+
+State:
+loc5,4
+Invariants:
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.testr0[p4]
+Pre:
+p4.t[p4]
+p4.testrgi[p4]
+
+State:
+loc6,5
+Invariants:
+( p4.x[8]{p4} <= 1 )
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.setri[p4]
+Pre:
+p4.testr0[p4]
+
+State:
+loc7,6
+Invariants:
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.testri[p4]
+p4.testrgi[p4]
+Pre:
+p4.setri[p4]
+
+State:
+loc8,7
+Invariants:
+Flows:
+( p4.x[8]{p4}' <= 2.3 )
+( p4.x[8]{p4}' >= 1.1 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+Next:
+p4.set0[p4]
+target$0[p4]
+Pre:
+p4.testri[p4]
+
+State:
+p4$initial,8
+Invariants:
+Flows:
+Next:
+initial$0[p4]
+Pre:
+
+State:
+p4$target,9
+Invariants:
+Flows:
+Next:
+Pre:
+target$0[p4]
+
+Transition:
+p4.testl0(loc1->loc2)
+ID:0
+Guards:
+( sv3[3][null][discrete] = 0 )
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.setli(loc2->loc3)
+ID:1
+Guards:
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = 4 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.testli(loc3->loc4)
+ID:2
+Guards:
+( p4.x[8]{p4} > 3 )
+( sv3[3][null][discrete] = 4 )
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.t(loc4->loc5)
+ID:3
+Guards:
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.testr0(loc5->loc6)
+ID:4
+Guards:
+( sv4[4][null][discrete] = 0 )
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.testlni(loc3->loc1)
+ID:5
+Guards:
+( p4.x[8]{p4} > 3 )
+( sv3[3][null][discrete] != 4 )
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.setri(loc6->loc7)
+ID:6
+Guards:
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv4[4][null][discrete]' = 4 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+
+Transition:
+p4.testri(loc7->loc8)
+ID:7
+Guards:
+( p4.x[8]{p4} > 3 )
+( sv4[4][null][discrete] = 4 )
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.testrgi(loc7->loc5)
+ID:8
+Guards:
+( p4.x[8]{p4} > 3 )
+( sv4[4][null][discrete] != 4 )
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p4.set0(loc8->loc1)
+ID:9
+Guards:
+Resets:
+( p4.x[8]{p4}' = 0 )
+( sv3[3][null][discrete]' = 0 )
+( sv4[4][null][discrete]' = 0 )
+
+Transition:
+initial$0(p4$initial->loc1)
+ID:10
+Guards:
+( p4.x[8]{p4} = 0 )
+Resets:
+( p4.x[8]{p4}' = p4.x[8]{p4} )
+( sv3[3][null][discrete]' = sv3[3][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+target$0(loc8->p4$target)
+ID:11
+Guards:
+Resets:
+
+related automata:
+p4
+
+*******************Automaton Information*********************
+Automaton:p5[4]
+variable:p5.x[9]{p5}
+shared variable:sv0[0][null][discrete]
+shared variable:sv4[4][null][discrete]
+State:
+loc1,0
+Invariants:
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.testl0[p5]
+Pre:
+p5.testlni[p5]
+p5.set0[p5]
+initial$0[p5]
+
+State:
+loc2,1
+Invariants:
+( p5.x[9]{p5} <= 1 )
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.setli[p5]
+Pre:
+p5.testl0[p5]
+
+State:
+loc4,2
+Invariants:
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.t[p5]
+Pre:
+p5.testli[p5]
+
+State:
+loc3,3
+Invariants:
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.testli[p5]
+p5.testlni[p5]
+Pre:
+p5.setli[p5]
+
+State:
+loc5,4
+Invariants:
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.testr0[p5]
+Pre:
+p5.t[p5]
+p5.testrgi[p5]
+
+State:
+loc6,5
+Invariants:
+( p5.x[9]{p5} <= 1 )
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.setri[p5]
+Pre:
+p5.testr0[p5]
+
+State:
+loc7,6
+Invariants:
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.testri[p5]
+p5.testrgi[p5]
+Pre:
+p5.setri[p5]
+
+State:
+loc8,7
+Invariants:
+Flows:
+( p5.x[9]{p5}' <= 2.3 )
+( p5.x[9]{p5}' >= 1.1 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+Next:
+p5.set0[p5]
+target$0[p5]
+Pre:
+p5.testri[p5]
+
+State:
+p5$initial,8
+Invariants:
+Flows:
+Next:
+initial$0[p5]
+Pre:
+
+State:
+p5$target,9
+Invariants:
+Flows:
+Next:
+Pre:
+target$0[p5]
+
+Transition:
+p5.testl0(loc1->loc2)
+ID:0
+Guards:
+( sv4[4][null][discrete] = 0 )
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.setli(loc2->loc3)
+ID:1
+Guards:
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = 5 )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.testli(loc3->loc4)
+ID:2
+Guards:
+( p5.x[9]{p5} > 3 )
+( sv4[4][null][discrete] = 5 )
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.t(loc4->loc5)
+ID:3
+Guards:
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.testr0(loc5->loc6)
+ID:4
+Guards:
+( sv0[0][null][discrete] = 0 )
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.testlni(loc3->loc1)
+ID:5
+Guards:
+( p5.x[9]{p5} > 3 )
+( sv4[4][null][discrete] != 5 )
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.setri(loc6->loc7)
+ID:6
+Guards:
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv0[0][null][discrete]' = 5 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+p5.testri(loc7->loc8)
+ID:7
+Guards:
+( p5.x[9]{p5} > 3 )
+( sv0[0][null][discrete] = 5 )
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.testrgi(loc7->loc5)
+ID:8
+Guards:
+( p5.x[9]{p5} > 3 )
+( sv0[0][null][discrete] != 5 )
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+
+Transition:
+p5.set0(loc8->loc1)
+ID:9
+Guards:
+Resets:
+( p5.x[9]{p5}' = 0 )
+( sv4[4][null][discrete]' = 0 )
+( sv0[0][null][discrete]' = 0 )
+
+Transition:
+initial$0(p5$initial->loc1)
+ID:10
+Guards:
+( p5.x[9]{p5} = 0 )
+Resets:
+( p5.x[9]{p5}' = p5.x[9]{p5} )
+( sv0[0][null][discrete]' = sv0[0][null][discrete] )
+( sv4[4][null][discrete]' = sv4[4][null][discrete] )
+
+Transition:
+target$0(loc8->p5$target)
+ID:11
+Guards:
+Resets:
+
+related automata:
+p5
+
+init spec:
+( ( ( ( ( true && LOC( p1 ) = p1$initial ) && LOC( p2 ) = p2$initial ) && LOC( p3 ) = p3$initial ) && LOC( p4 ) = p4$initial ) && LOC( p5 ) = p5$initial )
+reach spec:
+( ( ( ( ( true && LOC( p1 ) = p1$target ) && LOC( p2 ) = p2$target ) && LOC( p3 ) = p3$target ) && LOC( p4 ) = p4$target ) && LOC( p5 ) = p5$target )
+
+------------main()------------src/main.cpp:101-----------------
+z3solver
+------------InteractionBMC()------------src/BMC/InteractionBMC.cpp:22-----------------
+
+AcyclicAutomaton: p1 ****
+
+State:	0:p1$initial( 0 ) 
+ID:	8
+depth:	0
+before occs:
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[1]
+target$0 :	[1]
+next:
+initial$0 -> loc1 0
+from:
+
+State:	0:loc1( 0 ) 
+ID:	0
+depth:	1
+before occs:
+loc1( 0 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testl0 -> loc2 0
+from:
+p1$initial 0 -> initial$0
+
+State:	0:loc2( 0 ) 
+ID:	1
+depth:	2
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.setli -> loc3 0
+from:
+loc1 0 -> p1.testl0
+
+State:	0:loc3( 0 ) 
+ID:	3
+depth:	3
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testli -> loc4 0
+p1.testlni -> loc1 1
+from:
+loc2 0 -> p1.setli
+
+State:	0:loc1( 1 ) 
+ID:	0
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testl0 -> loc2 1
+from:
+loc3 0 -> p1.testlni
+
+State:	0:loc2( 1 ) 
+ID:	1
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.setli -> loc3 1
+from:
+loc1 1 -> p1.testl0
+
+State:	0:loc3( 1 ) 
+ID:	3
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	1
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testli -> loc4 0
+p1.testlni -> loc1 2
+from:
+loc2 1 -> p1.setli
+
+State:	0:loc4( 0 ) 
+ID:	2
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.t -> loc5 0
+from:
+loc3 0 -> p1.testli
+loc3 1 -> p1.testli
+
+State:	0:loc5( 0 ) 
+ID:	4
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testr0 -> loc6 0
+from:
+loc4 0 -> p1.t
+
+State:	0:loc6( 0 ) 
+ID:	5
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.setri -> loc7 0
+from:
+loc5 0 -> p1.testr0
+
+State:	0:loc7( 0 ) 
+ID:	6
+depth:	7
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testri -> loc8 0
+p1.testrgi -> loc5 1
+from:
+loc6 0 -> p1.setri
+
+State:	0:loc5( 1 ) 
+ID:	4
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testr0 -> loc6 1
+from:
+loc7 0 -> p1.testrgi
+
+State:	0:loc6( 1 ) 
+ID:	5
+depth:	9
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.setri -> loc7 1
+from:
+loc5 1 -> p1.testr0
+
+State:	0:loc7( 1 ) 
+ID:	6
+depth:	10
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testri -> loc8 0
+p1.testrgi -> loc5 2
+from:
+loc6 1 -> p1.setri
+
+State:	0:loc8( 0 ) 
+ID:	7
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.set0 -> loc1 2
+target$0 -> p1$target 0
+from:
+loc7 0 -> p1.testri
+loc7 1 -> p1.testri
+
+State:	0:loc1( 2 ) 
+ID:	0
+depth:	7
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testl0 -> loc2 2
+from:
+loc3 1 -> p1.testlni
+loc8 0 -> p1.set0
+
+State:	0:loc2( 2 ) 
+ID:	1
+depth:	8
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.setli -> loc3 2
+from:
+loc1 2 -> p1.testl0
+
+State:	0:loc3( 2 ) 
+ID:	3
+depth:	9
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testli -> loc4 1
+p1.testlni -> loc1 3
+from:
+loc2 2 -> p1.setli
+
+State:	0:loc1( 3 ) 
+ID:	0
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testl0 -> loc2 3
+from:
+loc3 2 -> p1.testlni
+
+State:	0:loc2( 3 ) 
+ID:	1
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.setli -> loc3 3
+from:
+loc1 3 -> p1.testl0
+
+State:	0:loc3( 3 ) 
+ID:	3
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testli -> loc4 1
+from:
+loc2 3 -> p1.setli
+
+State:	0:loc4( 1 ) 
+ID:	2
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.t -> loc5 2
+from:
+loc3 2 -> p1.testli
+loc3 3 -> p1.testli
+
+State:	0:loc5( 2 ) 
+ID:	4
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testr0 -> loc6 2
+from:
+loc7 1 -> p1.testrgi
+loc4 1 -> p1.t
+
+State:	0:loc6( 2 ) 
+ID:	5
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.setri -> loc7 2
+from:
+loc5 2 -> p1.testr0
+
+State:	0:loc7( 2 ) 
+ID:	6
+depth:	13
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	0
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p1.testri -> loc8 1
+from:
+loc6 2 -> p1.setri
+
+State:	0:loc8( 1 ) 
+ID:	7
+depth:	14
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p1$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+target$0 -> p1$target 0
+from:
+loc7 2 -> p1.testri
+
+State:	0:p1$target( 0 ) 
+ID:	9
+depth:	9
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p1$initial( 8 ) :	0
+p1$target( 9 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[10]
+next:
+from:
+loc8 0 -> target$0
+loc8 1 -> target$0
+
+--------------------------------
+AcyclicAutomaton: p2 ****
+
+State:	1:p2$initial( 0 ) 
+ID:	8
+depth:	0
+before occs:
+p2$initial( 8 ) :	0
+before label occs:
+initial$0 :	[1]
+target$0 :	[1]
+next:
+initial$0 -> loc1 0
+from:
+
+State:	1:loc1( 0 ) 
+ID:	0
+depth:	1
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testl0 -> loc2 0
+from:
+p2$initial 0 -> initial$0
+
+State:	1:loc2( 0 ) 
+ID:	1
+depth:	2
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.setli -> loc3 0
+from:
+loc1 0 -> p2.testl0
+
+State:	1:loc3( 0 ) 
+ID:	3
+depth:	3
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testli -> loc4 0
+p2.testlni -> loc1 1
+from:
+loc2 0 -> p2.setli
+
+State:	1:loc1( 1 ) 
+ID:	0
+depth:	4
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testl0 -> loc2 1
+from:
+loc3 0 -> p2.testlni
+
+State:	1:loc2( 1 ) 
+ID:	1
+depth:	5
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.setli -> loc3 1
+from:
+loc1 1 -> p2.testl0
+
+State:	1:loc3( 1 ) 
+ID:	3
+depth:	6
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	1
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testli -> loc4 0
+p2.testlni -> loc1 2
+from:
+loc2 1 -> p2.setli
+
+State:	1:loc4( 0 ) 
+ID:	2
+depth:	4
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.t -> loc5 0
+from:
+loc3 0 -> p2.testli
+loc3 1 -> p2.testli
+
+State:	1:loc5( 0 ) 
+ID:	4
+depth:	5
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testr0 -> loc6 0
+from:
+loc4 0 -> p2.t
+
+State:	1:loc6( 0 ) 
+ID:	5
+depth:	6
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.setri -> loc7 0
+from:
+loc5 0 -> p2.testr0
+
+State:	1:loc7( 0 ) 
+ID:	6
+depth:	7
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testri -> loc8 0
+p2.testrgi -> loc5 1
+from:
+loc6 0 -> p2.setri
+
+State:	1:loc5( 1 ) 
+ID:	4
+depth:	8
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testr0 -> loc6 1
+from:
+loc7 0 -> p2.testrgi
+
+State:	1:loc6( 1 ) 
+ID:	5
+depth:	9
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.setri -> loc7 1
+from:
+loc5 1 -> p2.testr0
+
+State:	1:loc7( 1 ) 
+ID:	6
+depth:	10
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testri -> loc8 0
+p2.testrgi -> loc5 2
+from:
+loc6 1 -> p2.setri
+
+State:	1:loc8( 0 ) 
+ID:	7
+depth:	8
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.set0 -> loc1 2
+target$0 -> p2$target 0
+from:
+loc7 0 -> p2.testri
+loc7 1 -> p2.testri
+
+State:	1:loc1( 2 ) 
+ID:	0
+depth:	7
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	2
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testl0 -> loc2 2
+from:
+loc3 1 -> p2.testlni
+loc8 0 -> p2.set0
+
+State:	1:loc2( 2 ) 
+ID:	1
+depth:	8
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.setli -> loc3 2
+from:
+loc1 2 -> p2.testl0
+
+State:	1:loc3( 2 ) 
+ID:	3
+depth:	9
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testli -> loc4 1
+p2.testlni -> loc1 3
+from:
+loc2 2 -> p2.setli
+
+State:	1:loc1( 3 ) 
+ID:	0
+depth:	10
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testl0 -> loc2 3
+from:
+loc3 2 -> p2.testlni
+
+State:	1:loc2( 3 ) 
+ID:	1
+depth:	11
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.setli -> loc3 3
+from:
+loc1 3 -> p2.testl0
+
+State:	1:loc3( 3 ) 
+ID:	3
+depth:	12
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testli -> loc4 1
+from:
+loc2 3 -> p2.setli
+
+State:	1:loc4( 1 ) 
+ID:	2
+depth:	10
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.t -> loc5 2
+from:
+loc3 2 -> p2.testli
+loc3 3 -> p2.testli
+
+State:	1:loc5( 2 ) 
+ID:	4
+depth:	11
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testr0 -> loc6 2
+from:
+loc7 1 -> p2.testrgi
+loc4 1 -> p2.t
+
+State:	1:loc6( 2 ) 
+ID:	5
+depth:	12
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.setri -> loc7 2
+from:
+loc5 2 -> p2.testr0
+
+State:	1:loc7( 2 ) 
+ID:	6
+depth:	13
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p2.testri -> loc8 1
+from:
+loc6 2 -> p2.setri
+
+State:	1:loc8( 1 ) 
+ID:	7
+depth:	14
+before occs:
+p2$initial( 8 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+target$0 -> p2$target 0
+from:
+loc7 2 -> p2.testri
+
+State:	1:p2$target( 0 ) 
+ID:	9
+depth:	9
+before occs:
+p2$initial( 8 ) :	0
+p2$target( 9 ) :	0
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+before label occs:
+initial$0 :	[10]
+target$0 :	[10]
+next:
+from:
+loc8 0 -> target$0
+loc8 1 -> target$0
+
+--------------------------------
+AcyclicAutomaton: p3 ****
+
+State:	2:p3$initial( 0 ) 
+ID:	8
+depth:	0
+before occs:
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[1]
+target$0 :	[1]
+next:
+initial$0 -> loc1 0
+from:
+
+State:	2:loc1( 0 ) 
+ID:	0
+depth:	1
+before occs:
+loc1( 0 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testl0 -> loc2 0
+from:
+p3$initial 0 -> initial$0
+
+State:	2:loc2( 0 ) 
+ID:	1
+depth:	2
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.setli -> loc3 0
+from:
+loc1 0 -> p3.testl0
+
+State:	2:loc3( 0 ) 
+ID:	3
+depth:	3
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testli -> loc4 0
+p3.testlni -> loc1 1
+from:
+loc2 0 -> p3.setli
+
+State:	2:loc1( 1 ) 
+ID:	0
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testl0 -> loc2 1
+from:
+loc3 0 -> p3.testlni
+
+State:	2:loc2( 1 ) 
+ID:	1
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.setli -> loc3 1
+from:
+loc1 1 -> p3.testl0
+
+State:	2:loc3( 1 ) 
+ID:	3
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	1
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testli -> loc4 0
+p3.testlni -> loc1 2
+from:
+loc2 1 -> p3.setli
+
+State:	2:loc4( 0 ) 
+ID:	2
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.t -> loc5 0
+from:
+loc3 0 -> p3.testli
+loc3 1 -> p3.testli
+
+State:	2:loc5( 0 ) 
+ID:	4
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testr0 -> loc6 0
+from:
+loc4 0 -> p3.t
+
+State:	2:loc6( 0 ) 
+ID:	5
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.setri -> loc7 0
+from:
+loc5 0 -> p3.testr0
+
+State:	2:loc7( 0 ) 
+ID:	6
+depth:	7
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testri -> loc8 0
+p3.testrgi -> loc5 1
+from:
+loc6 0 -> p3.setri
+
+State:	2:loc5( 1 ) 
+ID:	4
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testr0 -> loc6 1
+from:
+loc7 0 -> p3.testrgi
+
+State:	2:loc6( 1 ) 
+ID:	5
+depth:	9
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.setri -> loc7 1
+from:
+loc5 1 -> p3.testr0
+
+State:	2:loc7( 1 ) 
+ID:	6
+depth:	10
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testri -> loc8 0
+p3.testrgi -> loc5 2
+from:
+loc6 1 -> p3.setri
+
+State:	2:loc8( 0 ) 
+ID:	7
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.set0 -> loc1 2
+target$0 -> p3$target 0
+from:
+loc7 0 -> p3.testri
+loc7 1 -> p3.testri
+
+State:	2:loc1( 2 ) 
+ID:	0
+depth:	7
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testl0 -> loc2 2
+from:
+loc3 1 -> p3.testlni
+loc8 0 -> p3.set0
+
+State:	2:loc2( 2 ) 
+ID:	1
+depth:	8
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.setli -> loc3 2
+from:
+loc1 2 -> p3.testl0
+
+State:	2:loc3( 2 ) 
+ID:	3
+depth:	9
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testli -> loc4 1
+p3.testlni -> loc1 3
+from:
+loc2 2 -> p3.setli
+
+State:	2:loc1( 3 ) 
+ID:	0
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testl0 -> loc2 3
+from:
+loc3 2 -> p3.testlni
+
+State:	2:loc2( 3 ) 
+ID:	1
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.setli -> loc3 3
+from:
+loc1 3 -> p3.testl0
+
+State:	2:loc3( 3 ) 
+ID:	3
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testli -> loc4 1
+from:
+loc2 3 -> p3.setli
+
+State:	2:loc4( 1 ) 
+ID:	2
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.t -> loc5 2
+from:
+loc3 2 -> p3.testli
+loc3 3 -> p3.testli
+
+State:	2:loc5( 2 ) 
+ID:	4
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testr0 -> loc6 2
+from:
+loc7 1 -> p3.testrgi
+loc4 1 -> p3.t
+
+State:	2:loc6( 2 ) 
+ID:	5
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.setri -> loc7 2
+from:
+loc5 2 -> p3.testr0
+
+State:	2:loc7( 2 ) 
+ID:	6
+depth:	13
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	0
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p3.testri -> loc8 1
+from:
+loc6 2 -> p3.setri
+
+State:	2:loc8( 1 ) 
+ID:	7
+depth:	14
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p3$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+target$0 -> p3$target 0
+from:
+loc7 2 -> p3.testri
+
+State:	2:p3$target( 0 ) 
+ID:	9
+depth:	9
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p3$initial( 8 ) :	0
+p3$target( 9 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[10]
+next:
+from:
+loc8 0 -> target$0
+loc8 1 -> target$0
+
+--------------------------------
+AcyclicAutomaton: p4 ****
+
+State:	3:p4$initial( 0 ) 
+ID:	8
+depth:	0
+before occs:
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[1]
+target$0 :	[1]
+next:
+initial$0 -> loc1 0
+from:
+
+State:	3:loc1( 0 ) 
+ID:	0
+depth:	1
+before occs:
+loc1( 0 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testl0 -> loc2 0
+from:
+p4$initial 0 -> initial$0
+
+State:	3:loc2( 0 ) 
+ID:	1
+depth:	2
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.setli -> loc3 0
+from:
+loc1 0 -> p4.testl0
+
+State:	3:loc3( 0 ) 
+ID:	3
+depth:	3
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testli -> loc4 0
+p4.testlni -> loc1 1
+from:
+loc2 0 -> p4.setli
+
+State:	3:loc1( 1 ) 
+ID:	0
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testl0 -> loc2 1
+from:
+loc3 0 -> p4.testlni
+
+State:	3:loc2( 1 ) 
+ID:	1
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.setli -> loc3 1
+from:
+loc1 1 -> p4.testl0
+
+State:	3:loc3( 1 ) 
+ID:	3
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	1
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testli -> loc4 0
+p4.testlni -> loc1 2
+from:
+loc2 1 -> p4.setli
+
+State:	3:loc4( 0 ) 
+ID:	2
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.t -> loc5 0
+from:
+loc3 0 -> p4.testli
+loc3 1 -> p4.testli
+
+State:	3:loc5( 0 ) 
+ID:	4
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testr0 -> loc6 0
+from:
+loc4 0 -> p4.t
+
+State:	3:loc6( 0 ) 
+ID:	5
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.setri -> loc7 0
+from:
+loc5 0 -> p4.testr0
+
+State:	3:loc7( 0 ) 
+ID:	6
+depth:	7
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testri -> loc8 0
+p4.testrgi -> loc5 1
+from:
+loc6 0 -> p4.setri
+
+State:	3:loc5( 1 ) 
+ID:	4
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testr0 -> loc6 1
+from:
+loc7 0 -> p4.testrgi
+
+State:	3:loc6( 1 ) 
+ID:	5
+depth:	9
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.setri -> loc7 1
+from:
+loc5 1 -> p4.testr0
+
+State:	3:loc7( 1 ) 
+ID:	6
+depth:	10
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testri -> loc8 0
+p4.testrgi -> loc5 2
+from:
+loc6 1 -> p4.setri
+
+State:	3:loc8( 0 ) 
+ID:	7
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.set0 -> loc1 2
+target$0 -> p4$target 0
+from:
+loc7 0 -> p4.testri
+loc7 1 -> p4.testri
+
+State:	3:loc1( 2 ) 
+ID:	0
+depth:	7
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testl0 -> loc2 2
+from:
+loc3 1 -> p4.testlni
+loc8 0 -> p4.set0
+
+State:	3:loc2( 2 ) 
+ID:	1
+depth:	8
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.setli -> loc3 2
+from:
+loc1 2 -> p4.testl0
+
+State:	3:loc3( 2 ) 
+ID:	3
+depth:	9
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testli -> loc4 1
+p4.testlni -> loc1 3
+from:
+loc2 2 -> p4.setli
+
+State:	3:loc1( 3 ) 
+ID:	0
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testl0 -> loc2 3
+from:
+loc3 2 -> p4.testlni
+
+State:	3:loc2( 3 ) 
+ID:	1
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.setli -> loc3 3
+from:
+loc1 3 -> p4.testl0
+
+State:	3:loc3( 3 ) 
+ID:	3
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testli -> loc4 1
+from:
+loc2 3 -> p4.setli
+
+State:	3:loc4( 1 ) 
+ID:	2
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.t -> loc5 2
+from:
+loc3 2 -> p4.testli
+loc3 3 -> p4.testli
+
+State:	3:loc5( 2 ) 
+ID:	4
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testr0 -> loc6 2
+from:
+loc7 1 -> p4.testrgi
+loc4 1 -> p4.t
+
+State:	3:loc6( 2 ) 
+ID:	5
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.setri -> loc7 2
+from:
+loc5 2 -> p4.testr0
+
+State:	3:loc7( 2 ) 
+ID:	6
+depth:	13
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	0
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p4.testri -> loc8 1
+from:
+loc6 2 -> p4.setri
+
+State:	3:loc8( 1 ) 
+ID:	7
+depth:	14
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p4$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+target$0 -> p4$target 0
+from:
+loc7 2 -> p4.testri
+
+State:	3:p4$target( 0 ) 
+ID:	9
+depth:	9
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p4$initial( 8 ) :	0
+p4$target( 9 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[10]
+next:
+from:
+loc8 0 -> target$0
+loc8 1 -> target$0
+
+--------------------------------
+AcyclicAutomaton: p5 ****
+
+State:	4:p5$initial( 0 ) 
+ID:	8
+depth:	0
+before occs:
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[1]
+target$0 :	[1]
+next:
+initial$0 -> loc1 0
+from:
+
+State:	4:loc1( 0 ) 
+ID:	0
+depth:	1
+before occs:
+loc1( 0 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testl0 -> loc2 0
+from:
+p5$initial 0 -> initial$0
+
+State:	4:loc2( 0 ) 
+ID:	1
+depth:	2
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.setli -> loc3 0
+from:
+loc1 0 -> p5.testl0
+
+State:	4:loc3( 0 ) 
+ID:	3
+depth:	3
+before occs:
+loc1( 0 ) :	0
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testli -> loc4 0
+p5.testlni -> loc1 1
+from:
+loc2 0 -> p5.setli
+
+State:	4:loc1( 1 ) 
+ID:	0
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	0
+loc3( 3 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testl0 -> loc2 1
+from:
+loc3 0 -> p5.testlni
+
+State:	4:loc2( 1 ) 
+ID:	1
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.setli -> loc3 1
+from:
+loc1 1 -> p5.testl0
+
+State:	4:loc3( 1 ) 
+ID:	3
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc3( 3 ) :	1
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testli -> loc4 0
+p5.testlni -> loc1 2
+from:
+loc2 1 -> p5.setli
+
+State:	4:loc4( 0 ) 
+ID:	2
+depth:	4
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.t -> loc5 0
+from:
+loc3 0 -> p5.testli
+loc3 1 -> p5.testli
+
+State:	4:loc5( 0 ) 
+ID:	4
+depth:	5
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testr0 -> loc6 0
+from:
+loc4 0 -> p5.t
+
+State:	4:loc6( 0 ) 
+ID:	5
+depth:	6
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.setri -> loc7 0
+from:
+loc5 0 -> p5.testr0
+
+State:	4:loc7( 0 ) 
+ID:	6
+depth:	7
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	0
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testri -> loc8 0
+p5.testrgi -> loc5 1
+from:
+loc6 0 -> p5.setri
+
+State:	4:loc5( 1 ) 
+ID:	4
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	0
+loc7( 6 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testr0 -> loc6 1
+from:
+loc7 0 -> p5.testrgi
+
+State:	4:loc6( 1 ) 
+ID:	5
+depth:	9
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.setri -> loc7 1
+from:
+loc5 1 -> p5.testr0
+
+State:	4:loc7( 1 ) 
+ID:	6
+depth:	10
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testri -> loc8 0
+p5.testrgi -> loc5 2
+from:
+loc6 1 -> p5.setri
+
+State:	4:loc8( 0 ) 
+ID:	7
+depth:	8
+before occs:
+loc1( 0 ) :	1
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.set0 -> loc1 2
+target$0 -> p5$target 0
+from:
+loc7 0 -> p5.testri
+loc7 1 -> p5.testri
+
+State:	4:loc1( 2 ) 
+ID:	0
+depth:	7
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	1
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testl0 -> loc2 2
+from:
+loc3 1 -> p5.testlni
+loc8 0 -> p5.set0
+
+State:	4:loc2( 2 ) 
+ID:	1
+depth:	8
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	1
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.setli -> loc3 2
+from:
+loc1 2 -> p5.testl0
+
+State:	4:loc3( 2 ) 
+ID:	3
+depth:	9
+before occs:
+loc1( 0 ) :	2
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testli -> loc4 1
+p5.testlni -> loc1 3
+from:
+loc2 2 -> p5.setli
+
+State:	4:loc1( 3 ) 
+ID:	0
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	2
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testl0 -> loc2 3
+from:
+loc3 2 -> p5.testlni
+
+State:	4:loc2( 3 ) 
+ID:	1
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	2
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.setli -> loc3 3
+from:
+loc1 3 -> p5.testl0
+
+State:	4:loc3( 3 ) 
+ID:	3
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	0
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testli -> loc4 1
+from:
+loc2 3 -> p5.setli
+
+State:	4:loc4( 1 ) 
+ID:	2
+depth:	10
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	1
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.t -> loc5 2
+from:
+loc3 2 -> p5.testli
+loc3 3 -> p5.testli
+
+State:	4:loc5( 2 ) 
+ID:	4
+depth:	11
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	1
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testr0 -> loc6 2
+from:
+loc7 1 -> p5.testrgi
+loc4 1 -> p5.t
+
+State:	4:loc6( 2 ) 
+ID:	5
+depth:	12
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	1
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.setri -> loc7 2
+from:
+loc5 2 -> p5.testr0
+
+State:	4:loc7( 2 ) 
+ID:	6
+depth:	13
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	0
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+p5.testri -> loc8 1
+from:
+loc6 2 -> p5.setri
+
+State:	4:loc8( 1 ) 
+ID:	7
+depth:	14
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p5$initial( 8 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[1]
+next:
+target$0 -> p5$target 0
+from:
+loc7 2 -> p5.testri
+
+State:	4:p5$target( 0 ) 
+ID:	9
+depth:	9
+before occs:
+loc1( 0 ) :	3
+loc2( 1 ) :	3
+loc4( 2 ) :	1
+loc3( 3 ) :	3
+loc5( 4 ) :	2
+loc6( 5 ) :	2
+loc7( 6 ) :	2
+loc8( 7 ) :	1
+p5$initial( 8 ) :	0
+p5$target( 9 ) :	0
+before label occs:
+initial$0 :	[10]
+target$0 :	[10]
+next:
+from:
+loc8 0 -> target$0
+loc8 1 -> target$0
+
+--------------------------------
+------------check()------------src/BMC/InteractionBMC.cpp:284-----------------
+
+Cryptominisat
+version:5.6.8
+------------encodeProblem()------------src/BMC/InteractionBMC.cpp:157-----------------
+
+number of graph terms : 620
+number of rw terms : 2380
+number of interleaving terms : 80
+number of no cross terms : 0
+ratio of graph terms : 20.12%
+ratio of rw terms : 77.27%
+ratio of interleaving terms : 2.59%
+ratio of no cross terms : 0%
+------------check()------------src/BMC/InteractionBMC.cpp:300-----------------
+solving
