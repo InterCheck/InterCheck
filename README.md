@@ -6,7 +6,7 @@ This repository contains the code, benchmark instances,  executables and instruc
 
 ## Environment
 
-All experiments in the paper are conducted on a workstation (Intel Core i5-12500 CPU 3.4GHz, 16 GB RAM, and UBUNTU 20.04). The time limit for experiments is set to 1000 s, and the memory usage limit is set to 4 GB.
+All experiments in the paper are conducted on a workstation (Intel Core i5-12500 CPU 3.4GHz, 16 GB RAM, and UBUNTU 20.04). The time limit for experiments is set to 1000 s, and the memory usage limit is set to 4 GB. Note that cases where time limit is exceed will be recorded as out of time ('OOT'), and cases where memory limit is exceed will be recorded as out of memory ('OOM').
 All experiments will take about 4 hours.
 
 Finally, please note that the executables provided here are available solely for the purpose of reproducing the experiments of the above paper.
