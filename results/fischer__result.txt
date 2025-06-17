@@ -1,0 +1,24 @@
+fischer/unreachable/
+Number of Components:
+2,3,4,5,6,7,8,
+Bound:
+6,6,6,6,6,6,6,
+Time cost of InterCheck (s):
+0.13,0.72,2.58,11.78,53.96,303.68,OOT,
+
+Time cost of InterCheck-trg (s):
+0.14,0.56,1.72,4.9,11.88,43.58,564.33,
+
+-----------------------------------------------------------
+fischer/reachable/
+Number of Components:
+2,3,4,5,6,7,8,
+Bound:
+6,6,6,6,6,6,6,
+Time cost of InterCheck (s):
+0.01,0.09,0.45,1.5,2.11,10.84,13.71,
+
+Time cost of InterCheck-trg (s):
+0.01,0.09,0.44,0.7,3.79,2.22,11.22,
+
+-----------------------------------------------------------
