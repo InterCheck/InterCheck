@@ -1,0 +1,72 @@
+
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+
+<component id="A">
+	<param name="x" type="real" local="false" dynamics="any" controlled="true" />
+	<param name="c" type="real" local="true" dynamics="const" controlled="false" />
+	<location id="0" name="loc0">
+		<flow>x' == 4</flow>
+		<invariant>x &gt;= 0 &amp; x &lt;= c</invariant>
+	</location>
+	<location id="1" name="loc1">
+		<flow>x' == -2</flow>
+		<invariant>x &gt;= 0 &amp; x &lt;= c</invariant>
+	</location>
+	<transition source="0" target="1">
+		<guard>x == c</guard>
+		<assignment>x' = x</assignment>
+	</transition>
+	<transition source="1" target="0">
+		<guard>x == 0</guard>
+		<assignment>x' = x</assignment>
+	</transition>
+</component>
+<component id="Aut">
+	<param name="x" type="real" local="false" dynamics="any" controlled="false" />
+	<param name="y" type="real" local="true" dynamics="any" controlled="true" />
+	<param name="t" type="real" local="true" dynamics="const" controlled="false" />
+	<location id="0" name="loc0">
+	</location>
+	<location id="1" name="loc1">
+		<flow>y' == 1</flow>
+		<invariant>x &gt;= t </invariant>
+	</location>
+	<location id="2" name="loc2">
+	</location>
+	<transition source="0" target="1">
+		<guard>x == t</guard>
+		<assignment>x' = x &amp; y' = 0</assignment>
+	</transition>
+	<transition source="1" target="0">
+		<guard>x == t</guard>
+		<assignment>x' = x &amp; y' = 0</assignment>
+	</transition>
+	<transition source="1" target="2">
+		<guard>y &gt;= 14</guard>
+		<assignment>x' = x &amp; y' = y</assignment>
+	</transition>
+</component>
+<component id="sys">
+	<param name="reach" type="label" local="false"/>
+	<param name="x" type="real" local="false" dynamics="any" controlled="false" />
+	<bind component="A" as="A">
+		<map key="x">x</map>
+		<map key="c">14</map>
+	</bind>
+	<bind component="Aut" as="p1">
+		<map key="t">1</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p2">
+		<map key="t">2</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p3">
+		<map key="t">3</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p4">
+		<map key="t">4</map>
+		<map key="x">x</map>
+	</bind></component>
+</sspaceex>

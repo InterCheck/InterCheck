@@ -1,0 +1,364 @@
+
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+
+<component id="A">
+	<param name="x" type="real" local="false" dynamics="any" controlled="true" />
+	<param name="c" type="real" local="true" dynamics="const" controlled="false" />
+	<location id="0" name="loc0">
+		<flow>x' == 4</flow>
+		<invariant>x &gt;= 0 &amp; x &lt;= c</invariant>
+	</location>
+	<location id="1" name="loc1">
+		<flow>x' == -2</flow>
+		<invariant>x &gt;= 0 &amp; x &lt;= c</invariant>
+	</location>
+	<transition source="0" target="1">
+		<guard>x == c</guard>
+		<assignment>x' = x</assignment>
+	</transition>
+	<transition source="1" target="0">
+		<guard>x == 0</guard>
+		<assignment>x' = x</assignment>
+	</transition>
+</component>
+<component id="Aut">
+	<param name="x" type="real" local="false" dynamics="any" controlled="false" />
+	<param name="y" type="real" local="true" dynamics="any" controlled="true" />
+	<param name="t" type="real" local="true" dynamics="const" controlled="false" />
+	<location id="0" name="loc0">
+	</location>
+	<location id="1" name="loc1">
+		<flow>y' == 1</flow>
+		<invariant>x &gt;= t </invariant>
+	</location>
+	<location id="2" name="loc2">
+	</location>
+	<transition source="0" target="1">
+		<guard>x == t</guard>
+		<assignment>x' = x &amp; y' = 0</assignment>
+	</transition>
+	<transition source="1" target="0">
+		<guard>x == t</guard>
+		<assignment>x' = x &amp; y' = 0</assignment>
+	</transition>
+	<transition source="1" target="2">
+		<guard>y &gt;= 14</guard>
+		<assignment>x' = x &amp; y' = y</assignment>
+	</transition>
+</component>
+<component id="sys">
+	<param name="reach" type="label" local="false"/>
+	<param name="x" type="real" local="false" dynamics="any" controlled="false" />
+	<bind component="A" as="A">
+		<map key="x">x</map>
+		<map key="c">87</map>
+	</bind>
+	<bind component="Aut" as="p1">
+		<map key="t">1</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p2">
+		<map key="t">2</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p3">
+		<map key="t">3</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p4">
+		<map key="t">4</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p5">
+		<map key="t">5</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p6">
+		<map key="t">6</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p7">
+		<map key="t">7</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p8">
+		<map key="t">8</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p9">
+		<map key="t">9</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p10">
+		<map key="t">10</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p11">
+		<map key="t">11</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p12">
+		<map key="t">12</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p13">
+		<map key="t">13</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p14">
+		<map key="t">14</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p15">
+		<map key="t">15</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p16">
+		<map key="t">16</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p17">
+		<map key="t">17</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p18">
+		<map key="t">18</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p19">
+		<map key="t">19</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p20">
+		<map key="t">20</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p21">
+		<map key="t">21</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p22">
+		<map key="t">22</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p23">
+		<map key="t">23</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p24">
+		<map key="t">24</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p25">
+		<map key="t">25</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p26">
+		<map key="t">26</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p27">
+		<map key="t">27</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p28">
+		<map key="t">28</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p29">
+		<map key="t">29</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p30">
+		<map key="t">30</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p31">
+		<map key="t">31</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p32">
+		<map key="t">32</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p33">
+		<map key="t">33</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p34">
+		<map key="t">34</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p35">
+		<map key="t">35</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p36">
+		<map key="t">36</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p37">
+		<map key="t">37</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p38">
+		<map key="t">38</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p39">
+		<map key="t">39</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p40">
+		<map key="t">40</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p41">
+		<map key="t">41</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p42">
+		<map key="t">42</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p43">
+		<map key="t">43</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p44">
+		<map key="t">44</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p45">
+		<map key="t">45</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p46">
+		<map key="t">46</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p47">
+		<map key="t">47</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p48">
+		<map key="t">48</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p49">
+		<map key="t">49</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p50">
+		<map key="t">50</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p51">
+		<map key="t">51</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p52">
+		<map key="t">52</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p53">
+		<map key="t">53</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p54">
+		<map key="t">54</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p55">
+		<map key="t">55</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p56">
+		<map key="t">56</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p57">
+		<map key="t">57</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p58">
+		<map key="t">58</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p59">
+		<map key="t">59</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p60">
+		<map key="t">60</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p61">
+		<map key="t">61</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p62">
+		<map key="t">62</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p63">
+		<map key="t">63</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p64">
+		<map key="t">64</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p65">
+		<map key="t">65</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p66">
+		<map key="t">66</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p67">
+		<map key="t">67</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p68">
+		<map key="t">68</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p69">
+		<map key="t">69</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p70">
+		<map key="t">70</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p71">
+		<map key="t">71</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p72">
+		<map key="t">72</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p73">
+		<map key="t">73</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p74">
+		<map key="t">74</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p75">
+		<map key="t">75</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p76">
+		<map key="t">76</map>
+		<map key="x">x</map>
+	</bind>
+	<bind component="Aut" as="p77">
+		<map key="t">77</map>
+		<map key="x">x</map>
+	</bind></component>
+</sspaceex>

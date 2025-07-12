@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+	<component id="moto_template">
+		<param name="x" type="real" local="true" d1="1" d2="1" dynamics="any" />
+		<param name="t" type="real" local="true" d1="1" d2="1" dynamics="any" />
+		<param name="g" type="real" local="true" d1="1" d2="1" dynamics="any" />
+		<param name="e0" type="label" local="false" />
+		<param name="go_0" type="label" local="false" />
+		<param name="go_1" type="label" local="false" />
+		<param name="close_0" type="label" local="false" />
+		<param name="close_1" type="label" local="false" />
+		<param name="not_close_0" type="label" local="false" />
+		<param name="not_close_1" type="label" local="false" />
+		<param name="ref" type="label" local="false" />
+		<param name="rel" type="label" local="false" />
+		<param name="get_0" type="label" local="false" />
+		<param name="get_1" type="label" local="false" />
+		<location id="1" name="s0">
+			<flow>x'==0 &amp; t'==0 &amp; g'==0</flow>
+		</location>
+		<location id="2" name="s1">
+			<flow>x'==0 &amp; t'==1 &amp; g'&gt;=-0.001 &amp; g'&lt;=-0.0001</flow>
+		</location>
+		<location id="3" name="s2">
+			<invariant>t&lt;=3</invariant>
+			<flow>x'&gt;=0.01 &amp; x'&lt;=0.03 &amp; t'==1 &amp; g'&gt;=-0.5 &amp; g'&lt;=-0.3</flow>
+		</location>
+		<location id="4" name="s3">
+			<invariant>x&lt;=100 &amp; g&gt;=100</invariant>
+			<flow>x'&gt;=0.02 &amp; x'&lt;=0.04 &amp; t'==1 &amp; g'&gt;=-0.6 &amp; g'&lt;=-0.4</flow>
+		</location>
+		<location id="5" name="s4">
+			<invariant>x&lt;=100 &amp; g&gt;=100</invariant>
+			<flow>x'&gt;=0.01 &amp; x'&lt;=0.03 &amp; t'==1 &amp; g'&gt;=-0.5 &amp; g'&lt;=-0.3</flow>
+		</location>
+		<location id="6" name="s5">
+			<invariant>x&lt;=100 &amp; g&gt;=100</invariant>
+			<flow>x'&gt;=0.03 &amp; x'&lt;=0.05 &amp; t'==1 &amp; g'&gt;=-0.7 &amp; g'&lt;=-0.5</flow>
+		</location>
+		<location id="7" name="s6">
+			<invariant>g&lt;=12000</invariant>
+			<flow>x'==0 &amp; t'==1 &amp; g'&gt;=300 &amp; g'&lt;=500</flow>
+		</location>
+		<location id="8" name="s7">
+			<invariant>t&lt;=2</invariant>
+			<flow>x'&gt;=0.002 &amp; x'&lt;=0.004 &amp; t'==1 &amp; g'&gt;=-0.06 &amp; g'&lt;=-0.04</flow>
+		</location>
+		<location id="9" name="s8">
+			<flow>x'==0 &amp; t'==0 &amp; g'==0</flow>
+		</location>
+		<transition source="1" target="2">
+			<label>e0</label>
+			<assignment>x:=0&amp;t:=0&amp;g:=12000</assignment>
+		</transition>
+		<transition source="2" target="3">
+			<label>go_0</label>
+			<assignment>t:=0</assignment>
+		</transition>
+		<transition source="3" target="4">
+			<label>go_1</label>
+			<guard>t==3</guard>
+		</transition>
+		<transition source="4" target="5">
+			<label>close_0</label>
+		</transition>
+		<transition source="4" target="6">
+			<label>close_1</label>
+		</transition>
+		<transition source="4" target="7">
+			<label>ref</label>
+			<guard>g==100</guard>
+		</transition>
+		<transition source="4" target="8">
+			<label>get_0</label>
+			<guard>x==100</guard>
+		</transition>
+		<transition source="5" target="4">
+			<label>not_close_0</label>
+		</transition>
+		<transition source="6" target="4">
+			<label>not_close_1</label>
+		</transition>
+		<transition source="7" target="4">
+			<label>rel</label>
+			<guard>g==12000</guard>
+		</transition>
+		<transition source="8" target="9">
+			<label>get_1</label>
+			<guard>t==2</guard>
+		</transition>
+	</component>
+	<component id="system">
+		<param name="t0" type="label" local="false" />
+		<param name="go_0_1" type="label" local="false" />
+		<param name="get_0_1" type="label" local="false" />
+		<param name="close_0_1" type="label" local="false" />
+		<param name="not_close_0_1" type="label" local="false" />
+		<param name="go_1_2" type="label" local="false" />
+		<param name="get_1_2" type="label" local="false" />
+		<param name="close_1_2" type="label" local="false" />
+		<param name="not_close_1_2" type="label" local="false" />
+		<param name="go_2_3" type="label" local="false" />
+		<param name="get_2_3" type="label" local="false" />
+		<param name="close_2_3" type="label" local="false" />
+		<param name="not_close_2_3" type="label" local="false" />
+		<param name="go_3_4" type="label" local="false" />
+		<param name="get_3_4" type="label" local="false" />
+		<param name="close_3_4" type="label" local="false" />
+		<param name="not_close_3_4" type="label" local="false" />
+		<param name="go_4_5" type="label" local="false" />
+		<param name="get_4_5" type="label" local="false" />
+		<param name="close_4_5" type="label" local="false" />
+		<param name="not_close_4_5" type="label" local="false" />
+		<param name="go_5_6" type="label" local="false" />
+		<param name="get_5_6" type="label" local="false" />
+		<param name="close_5_6" type="label" local="false" />
+		<param name="not_close_5_6" type="label" local="false" />
+		<param name="go_6_7" type="label" local="false" />
+		<param name="get_6_7" type="label" local="false" />
+		<param name="close_6_7" type="label" local="false" />
+		<param name="not_close_6_7" type="label" local="false" />
+		<param name="go_7_8" type="label" local="false" />
+		<param name="get_7_8" type="label" local="false" />
+		<param name="close_7_8" type="label" local="false" />
+		<param name="not_close_7_8" type="label" local="false" />
+		<param name="go_8_9" type="label" local="false" />
+		<param name="get_8_9" type="label" local="false" />
+		<param name="close_8_9" type="label" local="false" />
+		<param name="not_close_8_9" type="label" local="false" />
+		<param name="go_9_10" type="label" local="false" />
+		<param name="get_9_10" type="label" local="false" />
+		<param name="close_9_10" type="label" local="false" />
+		<param name="not_close_9_10" type="label" local="false" />
+		<param name="go_10_11" type="label" local="false" />
+		<param name="get_10_11" type="label" local="false" />
+		<param name="close_10_11" type="label" local="false" />
+		<param name="not_close_10_11" type="label" local="false" />
+		<param name="go_11_12" type="label" local="false" />
+		<param name="get_11_12" type="label" local="false" />
+		<param name="close_11_12" type="label" local="false" />
+		<param name="not_close_11_12" type="label" local="false" />
+		<param name="go_12_13" type="label" local="false" />
+		<param name="get_12_13" type="label" local="false" />
+		<param name="close_12_13" type="label" local="false" />
+		<param name="not_close_12_13" type="label" local="false" />
+		<param name="go_13_14" type="label" local="false" />
+		<param name="get_13_14" type="label" local="false" />
+		<param name="close_13_14" type="label" local="false" />
+		<param name="not_close_13_14" type="label" local="false" />
+		<param name="go_14_15" type="label" local="false" />
+		<param name="get_14_15" type="label" local="false" />
+		<param name="close_14_15" type="label" local="false" />
+		<param name="not_close_14_15" type="label" local="false" />
+		<param name="go_15_16" type="label" local="false" />
+		<param name="get_15_16" type="label" local="false" />
+		<param name="close_15_16" type="label" local="false" />
+		<param name="not_close_15_16" type="label" local="false" />
+		<param name="go_16_17" type="label" local="false" />
+		<param name="get_16_17" type="label" local="false" />
+		<param name="close_16_17" type="label" local="false" />
+		<param name="not_close_16_17" type="label" local="false" />
+		<param name="go_17_18" type="label" local="false" />
+		<param name="get_17_18" type="label" local="false" />
+		<param name="close_17_18" type="label" local="false" />
+		<param name="not_close_17_18" type="label" local="false" />
+		<param name="go_18_19" type="label" local="false" />
+		<param name="get_18_19" type="label" local="false" />
+		<param name="close_18_19" type="label" local="false" />
+		<param name="not_close_18_19" type="label" local="false" />
+		<param name="go_19_20" type="label" local="false" />
+		<param name="get_19_20" type="label" local="false" />
+		<param name="close_19_20" type="label" local="false" />
+		<param name="not_close_19_20" type="label" local="false" />
+		<param name="go_20_21" type="label" local="false" />
+		<param name="get_20_21" type="label" local="false" />
+		<param name="close_20_21" type="label" local="false" />
+		<param name="not_close_20_21" type="label" local="false" />
+		<param name="go_21_22" type="label" local="false" />
+		<param name="get_21_22" type="label" local="false" />
+		<param name="close_21_22" type="label" local="false" />
+		<param name="not_close_21_22" type="label" local="false" />
+		<param name="go_22_23" type="label" local="false" />
+		<param name="get_22_23" type="label" local="false" />
+		<param name="close_22_23" type="label" local="false" />
+		<param name="not_close_22_23" type="label" local="false" />
+		<param name="go_23_24" type="label" local="false" />
+		<param name="get_23_24" type="label" local="false" />
+		<param name="close_23_24" type="label" local="false" />
+		<param name="not_close_23_24" type="label" local="false" />
+		<param name="go_24_25" type="label" local="false" />
+		<param name="get_24_25" type="label" local="false" />
+		<param name="close_24_25" type="label" local="false" />
+		<param name="not_close_24_25" type="label" local="false" />
+		<param name="go_25_26" type="label" local="false" />
+		<param name="get_25_26" type="label" local="false" />
+		<param name="close_25_26" type="label" local="false" />
+		<param name="not_close_25_26" type="label" local="false" />
+		<param name="go_26_27" type="label" local="false" />
+		<param name="get_26_27" type="label" local="false" />
+		<param name="close_26_27" type="label" local="false" />
+		<param name="not_close_26_27" type="label" local="false" />
+		<param name="go_27_28" type="label" local="false" />
+		<param name="get_27_28" type="label" local="false" />
+		<param name="close_27_28" type="label" local="false" />
+		<param name="not_close_27_28" type="label" local="false" />
+		<param name="go_28_29" type="label" local="false" />
+		<param name="get_28_29" type="label" local="false" />
+		<param name="close_28_29" type="label" local="false" />
+		<param name="not_close_28_29" type="label" local="false" />
+		<param name="go_29_30" type="label" local="false" />
+		<param name="get_29_30" type="label" local="false" />
+		<param name="close_29_30" type="label" local="false" />
+		<param name="not_close_29_30" type="label" local="false" />
+		<param name="go_30_31" type="label" local="false" />
+		<param name="get_30_31" type="label" local="false" />
+		<param name="close_30_31" type="label" local="false" />
+		<param name="not_close_30_31" type="label" local="false" />
+		<param name="go_31_32" type="label" local="false" />
+		<param name="get_31_32" type="label" local="false" />
+		<param name="close_31_32" type="label" local="false" />
+		<param name="not_close_31_32" type="label" local="false" />
+		<param name="go_32_33" type="label" local="false" />
+		<param name="get_32_33" type="label" local="false" />
+		<param name="close_32_33" type="label" local="false" />
+		<param name="not_close_32_33" type="label" local="false" />
+		<param name="go_33_34" type="label" local="false" />
+		<param name="get_33_34" type="label" local="false" />
+		<param name="close_33_34" type="label" local="false" />
+		<param name="not_close_33_34" type="label" local="false" />
+		<param name="go_34_35" type="label" local="false" />
+		<param name="get_34_35" type="label" local="false" />
+		<param name="close_34_35" type="label" local="false" />
+		<param name="not_close_34_35" type="label" local="false" />
+		<param name="go_35_36" type="label" local="false" />
+		<param name="get_35_36" type="label" local="false" />
+		<param name="close_35_36" type="label" local="false" />
+		<param name="not_close_35_36" type="label" local="false" />
+		<param name="go_36_37" type="label" local="false" />
+		<param name="get_36_37" type="label" local="false" />
+		<param name="close_36_37" type="label" local="false" />
+		<param name="not_close_36_37" type="label" local="false" />
+		<param name="go_37_38" type="label" local="false" />
+		<param name="get_37_38" type="label" local="false" />
+		<param name="close_37_38" type="label" local="false" />
+		<param name="not_close_37_38" type="label" local="false" />
+		<param name="go_38_39" type="label" local="false" />
+		<param name="get_38_39" type="label" local="false" />
+		<param name="close_38_39" type="label" local="false" />
+		<param name="not_close_38_39" type="label" local="false" />
+		<param name="go_39_40" type="label" local="false" />
+		<param name="get_39_40" type="label" local="false" />
+		<param name="close_39_40" type="label" local="false" />
+		<param name="not_close_39_40" type="label" local="false" />
+		<param name="go_40_41" type="label" local="false" />
+		<param name="get_40_41" type="label" local="false" />
+		<param name="close_40_41" type="label" local="false" />
+		<param name="not_close_40_41" type="label" local="false" />
+		<param name="go_41_42" type="label" local="false" />
+		<param name="get_41_42" type="label" local="false" />
+		<param name="close_41_42" type="label" local="false" />
+		<param name="not_close_41_42" type="label" local="false" />
+		<param name="go_42_43" type="label" local="false" />
+		<param name="get_42_43" type="label" local="false" />
+		<param name="close_42_43" type="label" local="false" />
+		<param name="not_close_42_43" type="label" local="false" />
+		<param name="go_43_44" type="label" local="false" />
+		<param name="get_43_44" type="label" local="false" />
+		<param name="close_43_44" type="label" local="false" />
+		<param name="not_close_43_44" type="label" local="false" />
+		<param name="go_44_45" type="label" local="false" />
+		<param name="get_44_45" type="label" local="false" />
+		<param name="close_44_45" type="label" local="false" />
+		<param name="not_close_44_45" type="label" local="false" />
+		<param name="go_45_46" type="label" local="false" />
+		<param name="get_45_46" type="label" local="false" />
+		<param name="close_45_46" type="label" local="false" />
+		<param name="not_close_45_46" type="label" local="false" />
+		<param name="go_46_47" type="label" local="false" />
+		<param name="get_46_47" type="label" local="false" />
+		<param name="close_46_47" type="label" local="false" />
+		<param name="not_close_46_47" type="label" local="false" />
+		<param name="go_47_48" type="label" local="false" />
+		<param name="get_47_48" type="label" local="false" />
+		<param name="close_47_48" type="label" local="false" />
+		<param name="not_close_47_48" type="label" local="false" />
+		<param name="go_48_49" type="label" local="false" />
+		<param name="get_48_49" type="label" local="false" />
+		<param name="close_48_49" type="label" local="false" />
+		<param name="not_close_48_49" type="label" local="false" />
+		<param name="go_49_50" type="label" local="false" />
+		<param name="get_49_50" type="label" local="false" />
+		<param name="close_49_50" type="label" local="false" />
+		<param name="not_close_49_50" type="label" local="false" />
+		<param name="go_50_51" type="label" local="false" />
+		<param name="get_50_51" type="label" local="false" />
+		<param name="close_50_51" type="label" local="false" />
+		<param name="not_close_50_51" type="label" local="false" />
+		<param name="go_51_52" type="label" local="false" />
+		<param name="get_51_52" type="label" local="false" />
+		<param name="close_51_52" type="label" local="false" />
+		<param name="not_close_51_52" type="label" local="false" />
+		<param name="go_52_53" type="label" local="false" />
+		<param name="get_52_53" type="label" local="false" />
+		<param name="close_52_53" type="label" local="false" />
+		<param name="not_close_52_53" type="label" local="false" />
+		<param name="go_53_54" type="label" local="false" />
+		<param name="get_53_54" type="label" local="false" />
+		<param name="close_53_54" type="label" local="false" />
+		<param name="not_close_53_54" type="label" local="false" />
+		<param name="go_54_55" type="label" local="false" />
+		<param name="get_54_55" type="label" local="false" />
+		<param name="close_54_55" type="label" local="false" />
+		<param name="not_close_54_55" type="label" local="false" />
+		<param name="go_55_56" type="label" local="false" />
+		<param name="get_55_56" type="label" local="false" />
+		<param name="close_55_56" type="label" local="false" />
+		<param name="not_close_55_56" type="label" local="false" />
+		<param name="go_56_57" type="label" local="false" />
+		<param name="get_56_57" type="label" local="false" />
+		<param name="close_56_57" type="label" local="false" />
+		<param name="not_close_56_57" type="label" local="false" />
+		<param name="go_57_58" type="label" local="false" />
+		<param name="get_57_58" type="label" local="false" />
+		<param name="close_57_58" type="label" local="false" />
+		<param name="not_close_57_58" type="label" local="false" />
+		<param name="go_58_59" type="label" local="false" />
+		<param name="get_58_59" type="label" local="false" />
+		<param name="close_58_59" type="label" local="false" />
+		<param name="not_close_58_59" type="label" local="false" />
+		<param name="go_59_60" type="label" local="false" />
+		<param name="get_59_60" type="label" local="false" />
+		<param name="close_59_60" type="label" local="false" />
+		<param name="not_close_59_60" type="label" local="false" />
+		<param name="go_60_61" type="label" local="false" />
+		<param name="get_60_61" type="label" local="false" />
+		<param name="close_60_61" type="label" local="false" />
+		<param name="not_close_60_61" type="label" local="false" />
+		<param name="go_61_62" type="label" local="false" />
+		<param name="get_61_62" type="label" local="false" />
+		<param name="close_61_62" type="label" local="false" />
+		<param name="not_close_61_62" type="label" local="false" />
+		<param name="go_62_63" type="label" local="false" />
+		<param name="get_62_63" type="label" local="false" />
+		<param name="close_62_63" type="label" local="false" />
+		<param name="not_close_62_63" type="label" local="false" />
+		<param name="go_63_64" type="label" local="false" />
+		<param name="get_63_64" type="label" local="false" />
+		<param name="close_63_64" type="label" local="false" />
+		<param name="not_close_63_64" type="label" local="false" />
+		<param name="go_64_65" type="label" local="false" />
+		<param name="get_64_65" type="label" local="false" />
+		<param name="close_64_65" type="label" local="false" />
+		<param name="not_close_64_65" type="label" local="false" />
+		<param name="go_65_66" type="label" local="false" />
+		<param name="get_65_66" type="label" local="false" />
+		<param name="close_65_66" type="label" local="false" />
+		<param name="not_close_65_66" type="label" local="false" />
+		<param name="go_66_67" type="label" local="false" />
+		<param name="get_66_67" type="label" local="false" />
+		<param name="close_66_67" type="label" local="false" />
+		<param name="not_close_66_67" type="label" local="false" />
+		<param name="go_67_68" type="label" local="false" />
+		<param name="get_67_68" type="label" local="false" />
+		<param name="close_67_68" type="label" local="false" />
+		<param name="not_close_67_68" type="label" local="false" />
+		<param name="go_68_69" type="label" local="false" />
+		<param name="get_68_69" type="label" local="false" />
+		<param name="close_68_69" type="label" local="false" />
+		<param name="not_close_68_69" type="label" local="false" />
+		<param name="go_69_70" type="label" local="false" />
+		<param name="get_69_70" type="label" local="false" />
+		<param name="close_69_70" type="label" local="false" />
+		<param name="not_close_69_70" type="label" local="false" />
+		<param name="go_70_71" type="label" local="false" />
+		<param name="get_70_71" type="label" local="false" />
+		<param name="close_70_71" type="label" local="false" />
+		<param name="not_close_70_71" type="label" local="false" />
+		<param name="go_71_72" type="label" local="false" />
+		<param name="get_71_72" type="label" local="false" />
+		<param name="close_71_72" type="label" local="false" />
+		<param name="not_close_71_72" type="label" local="false" />
+		<param name="go_72_73" type="label" local="false" />
+		<param name="get_72_73" type="label" local="false" />
+		<param name="close_72_73" type="label" local="false" />
+		<param name="not_close_72_73" type="label" local="false" />
+		<param name="go_73_74" type="label" local="false" />
+		<param name="get_73_74" type="label" local="false" />
+		<param name="close_73_74" type="label" local="false" />
+		<param name="not_close_73_74" type="label" local="false" />
+		<param name="go_74_75" type="label" local="false" />
+		<param name="get_74_75" type="label" local="false" />
+		<param name="close_74_75" type="label" local="false" />
+		<param name="not_close_74_75" type="label" local="false" />
+		<param name="rel_1" type="label" local="false" />
+		<param name="ref_1" type="label" local="false" />
+		<param name="rel_2" type="label" local="false" />
+		<param name="ref_2" type="label" local="false" />
+		<param name="rel_3" type="label" local="false" />
+		<param name="ref_3" type="label" local="false" />
+		<param name="rel_4" type="label" local="false" />
+		<param name="ref_4" type="label" local="false" />
+		<param name="rel_5" type="label" local="false" />
+		<param name="ref_5" type="label" local="false" />
+		<param name="rel_6" type="label" local="false" />
+		<param name="ref_6" type="label" local="false" />
+		<param name="rel_7" type="label" local="false" />
+		<param name="ref_7" type="label" local="false" />
+		<param name="rel_8" type="label" local="false" />
+		<param name="ref_8" type="label" local="false" />
+		<param name="rel_9" type="label" local="false" />
+		<param name="ref_9" type="label" local="false" />
+		<param name="rel_10" type="label" local="false" />
+		<param name="ref_10" type="label" local="false" />
+		<param name="rel_11" type="label" local="false" />
+		<param name="ref_11" type="label" local="false" />
+		<param name="rel_12" type="label" local="false" />
+		<param name="ref_12" type="label" local="false" />
+		<param name="rel_13" type="label" local="false" />
+		<param name="ref_13" type="label" local="false" />
+		<param name="rel_14" type="label" local="false" />
+		<param name="ref_14" type="label" local="false" />
+		<param name="rel_15" type="label" local="false" />
+		<param name="ref_15" type="label" local="false" />
+		<param name="rel_16" type="label" local="false" />
+		<param name="ref_16" type="label" local="false" />
+		<param name="rel_17" type="label" local="false" />
+		<param name="ref_17" type="label" local="false" />
+		<param name="rel_18" type="label" local="false" />
+		<param name="ref_18" type="label" local="false" />
+		<param name="rel_19" type="label" local="false" />
+		<param name="ref_19" type="label" local="false" />
+		<param name="rel_20" type="label" local="false" />
+		<param name="ref_20" type="label" local="false" />
+		<param name="rel_21" type="label" local="false" />
+		<param name="ref_21" type="label" local="false" />
+		<param name="rel_22" type="label" local="false" />
+		<param name="ref_22" type="label" local="false" />
+		<param name="rel_23" type="label" local="false" />
+		<param name="ref_23" type="label" local="false" />
+		<param name="rel_24" type="label" local="false" />
+		<param name="ref_24" type="label" local="false" />
+		<param name="rel_25" type="label" local="false" />
+		<param name="ref_25" type="label" local="false" />
+		<param name="rel_26" type="label" local="false" />
+		<param name="ref_26" type="label" local="false" />
+		<param name="rel_27" type="label" local="false" />
+		<param name="ref_27" type="label" local="false" />
+		<param name="rel_28" type="label" local="false" />
+		<param name="ref_28" type="label" local="false" />
+		<param name="rel_29" type="label" local="false" />
+		<param name="ref_29" type="label" local="false" />
+		<param name="rel_30" type="label" local="false" />
+		<param name="ref_30" type="label" local="false" />
+		<param name="rel_31" type="label" local="false" />
+		<param name="ref_31" type="label" local="false" />
+		<param name="rel_32" type="label" local="false" />
+		<param name="ref_32" type="label" local="false" />
+		<param name="rel_33" type="label" local="false" />
+		<param name="ref_33" type="label" local="false" />
+		<param name="rel_34" type="label" local="false" />
+		<param name="ref_34" type="label" local="false" />
+		<param name="rel_35" type="label" local="false" />
+		<param name="ref_35" type="label" local="false" />
+		<param name="rel_36" type="label" local="false" />
+		<param name="ref_36" type="label" local="false" />
+		<param name="rel_37" type="label" local="false" />
+		<param name="ref_37" type="label" local="false" />
+		<param name="rel_38" type="label" local="false" />
+		<param name="ref_38" type="label" local="false" />
+		<param name="rel_39" type="label" local="false" />
+		<param name="ref_39" type="label" local="false" />
+		<param name="rel_40" type="label" local="false" />
+		<param name="ref_40" type="label" local="false" />
+		<param name="rel_41" type="label" local="false" />
+		<param name="ref_41" type="label" local="false" />
+		<param name="rel_42" type="label" local="false" />
+		<param name="ref_42" type="label" local="false" />
+		<param name="rel_43" type="label" local="false" />
+		<param name="ref_43" type="label" local="false" />
+		<param name="rel_44" type="label" local="false" />
+		<param name="ref_44" type="label" local="false" />
+		<param name="rel_45" type="label" local="false" />
+		<param name="ref_45" type="label" local="false" />
+		<param name="rel_46" type="label" local="false" />
+		<param name="ref_46" type="label" local="false" />
+		<param name="rel_47" type="label" local="false" />
+		<param name="ref_47" type="label" local="false" />
+		<param name="rel_48" type="label" local="false" />
+		<param name="ref_48" type="label" local="false" />
+		<param name="rel_49" type="label" local="false" />
+		<param name="ref_49" type="label" local="false" />
+		<param name="rel_50" type="label" local="false" />
+		<param name="ref_50" type="label" local="false" />
+		<param name="rel_51" type="label" local="false" />
+		<param name="ref_51" type="label" local="false" />
+		<param name="rel_52" type="label" local="false" />
+		<param name="ref_52" type="label" local="false" />
+		<param name="rel_53" type="label" local="false" />
+		<param name="ref_53" type="label" local="false" />
+		<param name="rel_54" type="label" local="false" />
+		<param name="ref_54" type="label" local="false" />
+		<param name="rel_55" type="label" local="false" />
+		<param name="ref_55" type="label" local="false" />
+		<param name="rel_56" type="label" local="false" />
+		<param name="ref_56" type="label" local="false" />
+		<param name="rel_57" type="label" local="false" />
+		<param name="ref_57" type="label" local="false" />
+		<param name="rel_58" type="label" local="false" />
+		<param name="ref_58" type="label" local="false" />
+		<param name="rel_59" type="label" local="false" />
+		<param name="ref_59" type="label" local="false" />
+		<param name="rel_60" type="label" local="false" />
+		<param name="ref_60" type="label" local="false" />
+		<param name="rel_61" type="label" local="false" />
+		<param name="ref_61" type="label" local="false" />
+		<param name="rel_62" type="label" local="false" />
+		<param name="ref_62" type="label" local="false" />
+		<param name="rel_63" type="label" local="false" />
+		<param name="ref_63" type="label" local="false" />
+		<param name="rel_64" type="label" local="false" />
+		<param name="ref_64" type="label" local="false" />
+		<param name="rel_65" type="label" local="false" />
+		<param name="ref_65" type="label" local="false" />
+		<param name="rel_66" type="label" local="false" />
+		<param name="ref_66" type="label" local="false" />
+		<param name="rel_67" type="label" local="false" />
+		<param name="ref_67" type="label" local="false" />
+		<param name="rel_68" type="label" local="false" />
+		<param name="ref_68" type="label" local="false" />
+		<param name="rel_69" type="label" local="false" />
+		<param name="ref_69" type="label" local="false" />
+		<param name="rel_70" type="label" local="false" />
+		<param name="ref_70" type="label" local="false" />
+		<param name="rel_71" type="label" local="false" />
+		<param name="ref_71" type="label" local="false" />
+		<param name="rel_72" type="label" local="false" />
+		<param name="ref_72" type="label" local="false" />
+		<param name="rel_73" type="label" local="false" />
+		<param name="ref_73" type="label" local="false" />
+		<param name="rel_74" type="label" local="false" />
+		<param name="ref_74" type="label" local="false" />
+		<bind component="moto_template" as="moto1">
+			<map key="go_0">go_0_1</map>
+			<map key="go_1">go_1_2</map>
+			<map key="close_0">close_0_1</map>
+			<map key="close_1">close_1_2</map>
+			<map key="get_0">get_0_1</map>
+			<map key="get_1">get_1_2</map>
+			<map key="not_close_0">not_close_0_1</map>
+			<map key="not_close_1">not_close_1_2</map>
+			<map key="ref">ref_1</map>
+			<map key="rel">rel_1</map>
+		</bind>
+		<bind component="moto_template" as="moto2">
+			<map key="go_0">go_1_2</map>
+			<map key="go_1">go_2_3</map>
+			<map key="close_0">close_1_2</map>
+			<map key="close_1">close_2_3</map>
+			<map key="get_0">get_1_2</map>
+			<map key="get_1">get_2_3</map>
+			<map key="not_close_0">not_close_1_2</map>
+			<map key="not_close_1">not_close_2_3</map>
+			<map key="ref">ref_2</map>
+			<map key="rel">rel_2</map>
+		</bind>
+		<bind component="moto_template" as="moto3">
+			<map key="go_0">go_2_3</map>
+			<map key="go_1">go_3_4</map>
+			<map key="close_0">close_2_3</map>
+			<map key="close_1">close_3_4</map>
+			<map key="get_0">get_2_3</map>
+			<map key="get_1">get_3_4</map>
+			<map key="not_close_0">not_close_2_3</map>
+			<map key="not_close_1">not_close_3_4</map>
+			<map key="ref">ref_3</map>
+			<map key="rel">rel_3</map>
+		</bind>
+		<bind component="moto_template" as="moto4">
+			<map key="go_0">go_3_4</map>
+			<map key="go_1">go_4_5</map>
+			<map key="close_0">close_3_4</map>
+			<map key="close_1">close_4_5</map>
+			<map key="get_0">get_3_4</map>
+			<map key="get_1">get_4_5</map>
+			<map key="not_close_0">not_close_3_4</map>
+			<map key="not_close_1">not_close_4_5</map>
+			<map key="ref">ref_4</map>
+			<map key="rel">rel_4</map>
+		</bind>
+		<bind component="moto_template" as="moto5">
+			<map key="go_0">go_4_5</map>
+			<map key="go_1">go_5_6</map>
+			<map key="close_0">close_4_5</map>
+			<map key="close_1">close_5_6</map>
+			<map key="get_0">get_4_5</map>
+			<map key="get_1">get_5_6</map>
+			<map key="not_close_0">not_close_4_5</map>
+			<map key="not_close_1">not_close_5_6</map>
+			<map key="ref">ref_5</map>
+			<map key="rel">rel_5</map>
+		</bind>
+		<bind component="moto_template" as="moto6">
+			<map key="go_0">go_5_6</map>
+			<map key="go_1">go_6_7</map>
+			<map key="close_0">close_5_6</map>
+			<map key="close_1">close_6_7</map>
+			<map key="get_0">get_5_6</map>
+			<map key="get_1">get_6_7</map>
+			<map key="not_close_0">not_close_5_6</map>
+			<map key="not_close_1">not_close_6_7</map>
+			<map key="ref">ref_6</map>
+			<map key="rel">rel_6</map>
+		</bind>
+		<bind component="moto_template" as="moto7">
+			<map key="go_0">go_6_7</map>
+			<map key="go_1">go_7_8</map>
+			<map key="close_0">close_6_7</map>
+			<map key="close_1">close_7_8</map>
+			<map key="get_0">get_6_7</map>
+			<map key="get_1">get_7_8</map>
+			<map key="not_close_0">not_close_6_7</map>
+			<map key="not_close_1">not_close_7_8</map>
+			<map key="ref">ref_7</map>
+			<map key="rel">rel_7</map>
+		</bind>
+		<bind component="moto_template" as="moto8">
+			<map key="go_0">go_7_8</map>
+			<map key="go_1">go_8_9</map>
+			<map key="close_0">close_7_8</map>
+			<map key="close_1">close_8_9</map>
+			<map key="get_0">get_7_8</map>
+			<map key="get_1">get_8_9</map>
+			<map key="not_close_0">not_close_7_8</map>
+			<map key="not_close_1">not_close_8_9</map>
+			<map key="ref">ref_8</map>
+			<map key="rel">rel_8</map>
+		</bind>
+		<bind component="moto_template" as="moto9">
+			<map key="go_0">go_8_9</map>
+			<map key="go_1">go_9_10</map>
+			<map key="close_0">close_8_9</map>
+			<map key="close_1">close_9_10</map>
+			<map key="get_0">get_8_9</map>
+			<map key="get_1">get_9_10</map>
+			<map key="not_close_0">not_close_8_9</map>
+			<map key="not_close_1">not_close_9_10</map>
+			<map key="ref">ref_9</map>
+			<map key="rel">rel_9</map>
+		</bind>
+		<bind component="moto_template" as="moto10">
+			<map key="go_0">go_9_10</map>
+			<map key="go_1">go_10_11</map>
+			<map key="close_0">close_9_10</map>
+			<map key="close_1">close_10_11</map>
+			<map key="get_0">get_9_10</map>
+			<map key="get_1">get_10_11</map>
+			<map key="not_close_0">not_close_9_10</map>
+			<map key="not_close_1">not_close_10_11</map>
+			<map key="ref">ref_10</map>
+			<map key="rel">rel_10</map>
+		</bind>
+		<bind component="moto_template" as="moto11">
+			<map key="go_0">go_10_11</map>
+			<map key="go_1">go_11_12</map>
+			<map key="close_0">close_10_11</map>
+			<map key="close_1">close_11_12</map>
+			<map key="get_0">get_10_11</map>
+			<map key="get_1">get_11_12</map>
+			<map key="not_close_0">not_close_10_11</map>
+			<map key="not_close_1">not_close_11_12</map>
+			<map key="ref">ref_11</map>
+			<map key="rel">rel_11</map>
+		</bind>
+		<bind component="moto_template" as="moto12">
+			<map key="go_0">go_11_12</map>
+			<map key="go_1">go_12_13</map>
+			<map key="close_0">close_11_12</map>
+			<map key="close_1">close_12_13</map>
+			<map key="get_0">get_11_12</map>
+			<map key="get_1">get_12_13</map>
+			<map key="not_close_0">not_close_11_12</map>
+			<map key="not_close_1">not_close_12_13</map>
+			<map key="ref">ref_12</map>
+			<map key="rel">rel_12</map>
+		</bind>
+		<bind component="moto_template" as="moto13">
+			<map key="go_0">go_12_13</map>
+			<map key="go_1">go_13_14</map>
+			<map key="close_0">close_12_13</map>
+			<map key="close_1">close_13_14</map>
+			<map key="get_0">get_12_13</map>
+			<map key="get_1">get_13_14</map>
+			<map key="not_close_0">not_close_12_13</map>
+			<map key="not_close_1">not_close_13_14</map>
+			<map key="ref">ref_13</map>
+			<map key="rel">rel_13</map>
+		</bind>
+		<bind component="moto_template" as="moto14">
+			<map key="go_0">go_13_14</map>
+			<map key="go_1">go_14_15</map>
+			<map key="close_0">close_13_14</map>
+			<map key="close_1">close_14_15</map>
+			<map key="get_0">get_13_14</map>
+			<map key="get_1">get_14_15</map>
+			<map key="not_close_0">not_close_13_14</map>
+			<map key="not_close_1">not_close_14_15</map>
+			<map key="ref">ref_14</map>
+			<map key="rel">rel_14</map>
+		</bind>
+		<bind component="moto_template" as="moto15">
+			<map key="go_0">go_14_15</map>
+			<map key="go_1">go_15_16</map>
+			<map key="close_0">close_14_15</map>
+			<map key="close_1">close_15_16</map>
+			<map key="get_0">get_14_15</map>
+			<map key="get_1">get_15_16</map>
+			<map key="not_close_0">not_close_14_15</map>
+			<map key="not_close_1">not_close_15_16</map>
+			<map key="ref">ref_15</map>
+			<map key="rel">rel_15</map>
+		</bind>
+		<bind component="moto_template" as="moto16">
+			<map key="go_0">go_15_16</map>
+			<map key="go_1">go_16_17</map>
+			<map key="close_0">close_15_16</map>
+			<map key="close_1">close_16_17</map>
+			<map key="get_0">get_15_16</map>
+			<map key="get_1">get_16_17</map>
+			<map key="not_close_0">not_close_15_16</map>
+			<map key="not_close_1">not_close_16_17</map>
+			<map key="ref">ref_16</map>
+			<map key="rel">rel_16</map>
+		</bind>
+		<bind component="moto_template" as="moto17">
+			<map key="go_0">go_16_17</map>
+			<map key="go_1">go_17_18</map>
+			<map key="close_0">close_16_17</map>
+			<map key="close_1">close_17_18</map>
+			<map key="get_0">get_16_17</map>
+			<map key="get_1">get_17_18</map>
+			<map key="not_close_0">not_close_16_17</map>
+			<map key="not_close_1">not_close_17_18</map>
+			<map key="ref">ref_17</map>
+			<map key="rel">rel_17</map>
+		</bind>
+		<bind component="moto_template" as="moto18">
+			<map key="go_0">go_17_18</map>
+			<map key="go_1">go_18_19</map>
+			<map key="close_0">close_17_18</map>
+			<map key="close_1">close_18_19</map>
+			<map key="get_0">get_17_18</map>
+			<map key="get_1">get_18_19</map>
+			<map key="not_close_0">not_close_17_18</map>
+			<map key="not_close_1">not_close_18_19</map>
+			<map key="ref">ref_18</map>
+			<map key="rel">rel_18</map>
+		</bind>
+		<bind component="moto_template" as="moto19">
+			<map key="go_0">go_18_19</map>
+			<map key="go_1">go_19_20</map>
+			<map key="close_0">close_18_19</map>
+			<map key="close_1">close_19_20</map>
+			<map key="get_0">get_18_19</map>
+			<map key="get_1">get_19_20</map>
+			<map key="not_close_0">not_close_18_19</map>
+			<map key="not_close_1">not_close_19_20</map>
+			<map key="ref">ref_19</map>
+			<map key="rel">rel_19</map>
+		</bind>
+		<bind component="moto_template" as="moto20">
+			<map key="go_0">go_19_20</map>
+			<map key="go_1">go_20_21</map>
+			<map key="close_0">close_19_20</map>
+			<map key="close_1">close_20_21</map>
+			<map key="get_0">get_19_20</map>
+			<map key="get_1">get_20_21</map>
+			<map key="not_close_0">not_close_19_20</map>
+			<map key="not_close_1">not_close_20_21</map>
+			<map key="ref">ref_20</map>
+			<map key="rel">rel_20</map>
+		</bind>
+		<bind component="moto_template" as="moto21">
+			<map key="go_0">go_20_21</map>
+			<map key="go_1">go_21_22</map>
+			<map key="close_0">close_20_21</map>
+			<map key="close_1">close_21_22</map>
+			<map key="get_0">get_20_21</map>
+			<map key="get_1">get_21_22</map>
+			<map key="not_close_0">not_close_20_21</map>
+			<map key="not_close_1">not_close_21_22</map>
+			<map key="ref">ref_21</map>
+			<map key="rel">rel_21</map>
+		</bind>
+		<bind component="moto_template" as="moto22">
+			<map key="go_0">go_21_22</map>
+			<map key="go_1">go_22_23</map>
+			<map key="close_0">close_21_22</map>
+			<map key="close_1">close_22_23</map>
+			<map key="get_0">get_21_22</map>
+			<map key="get_1">get_22_23</map>
+			<map key="not_close_0">not_close_21_22</map>
+			<map key="not_close_1">not_close_22_23</map>
+			<map key="ref">ref_22</map>
+			<map key="rel">rel_22</map>
+		</bind>
+		<bind component="moto_template" as="moto23">
+			<map key="go_0">go_22_23</map>
+			<map key="go_1">go_23_24</map>
+			<map key="close_0">close_22_23</map>
+			<map key="close_1">close_23_24</map>
+			<map key="get_0">get_22_23</map>
+			<map key="get_1">get_23_24</map>
+			<map key="not_close_0">not_close_22_23</map>
+			<map key="not_close_1">not_close_23_24</map>
+			<map key="ref">ref_23</map>
+			<map key="rel">rel_23</map>
+		</bind>
+		<bind component="moto_template" as="moto24">
+			<map key="go_0">go_23_24</map>
+			<map key="go_1">go_24_25</map>
+			<map key="close_0">close_23_24</map>
+			<map key="close_1">close_24_25</map>
+			<map key="get_0">get_23_24</map>
+			<map key="get_1">get_24_25</map>
+			<map key="not_close_0">not_close_23_24</map>
+			<map key="not_close_1">not_close_24_25</map>
+			<map key="ref">ref_24</map>
+			<map key="rel">rel_24</map>
+		</bind>
+		<bind component="moto_template" as="moto25">
+			<map key="go_0">go_24_25</map>
+			<map key="go_1">go_25_26</map>
+			<map key="close_0">close_24_25</map>
+			<map key="close_1">close_25_26</map>
+			<map key="get_0">get_24_25</map>
+			<map key="get_1">get_25_26</map>
+			<map key="not_close_0">not_close_24_25</map>
+			<map key="not_close_1">not_close_25_26</map>
+			<map key="ref">ref_25</map>
+			<map key="rel">rel_25</map>
+		</bind>
+		<bind component="moto_template" as="moto26">
+			<map key="go_0">go_25_26</map>
+			<map key="go_1">go_26_27</map>
+			<map key="close_0">close_25_26</map>
+			<map key="close_1">close_26_27</map>
+			<map key="get_0">get_25_26</map>
+			<map key="get_1">get_26_27</map>
+			<map key="not_close_0">not_close_25_26</map>
+			<map key="not_close_1">not_close_26_27</map>
+			<map key="ref">ref_26</map>
+			<map key="rel">rel_26</map>
+		</bind>
+		<bind component="moto_template" as="moto27">
+			<map key="go_0">go_26_27</map>
+			<map key="go_1">go_27_28</map>
+			<map key="close_0">close_26_27</map>
+			<map key="close_1">close_27_28</map>
+			<map key="get_0">get_26_27</map>
+			<map key="get_1">get_27_28</map>
+			<map key="not_close_0">not_close_26_27</map>
+			<map key="not_close_1">not_close_27_28</map>
+			<map key="ref">ref_27</map>
+			<map key="rel">rel_27</map>
+		</bind>
+		<bind component="moto_template" as="moto28">
+			<map key="go_0">go_27_28</map>
+			<map key="go_1">go_28_29</map>
+			<map key="close_0">close_27_28</map>
+			<map key="close_1">close_28_29</map>
+			<map key="get_0">get_27_28</map>
+			<map key="get_1">get_28_29</map>
+			<map key="not_close_0">not_close_27_28</map>
+			<map key="not_close_1">not_close_28_29</map>
+			<map key="ref">ref_28</map>
+			<map key="rel">rel_28</map>
+		</bind>
+		<bind component="moto_template" as="moto29">
+			<map key="go_0">go_28_29</map>
+			<map key="go_1">go_29_30</map>
+			<map key="close_0">close_28_29</map>
+			<map key="close_1">close_29_30</map>
+			<map key="get_0">get_28_29</map>
+			<map key="get_1">get_29_30</map>
+			<map key="not_close_0">not_close_28_29</map>
+			<map key="not_close_1">not_close_29_30</map>
+			<map key="ref">ref_29</map>
+			<map key="rel">rel_29</map>
+		</bind>
+		<bind component="moto_template" as="moto30">
+			<map key="go_0">go_29_30</map>
+			<map key="go_1">go_30_31</map>
+			<map key="close_0">close_29_30</map>
+			<map key="close_1">close_30_31</map>
+			<map key="get_0">get_29_30</map>
+			<map key="get_1">get_30_31</map>
+			<map key="not_close_0">not_close_29_30</map>
+			<map key="not_close_1">not_close_30_31</map>
+			<map key="ref">ref_30</map>
+			<map key="rel">rel_30</map>
+		</bind>
+		<bind component="moto_template" as="moto31">
+			<map key="go_0">go_30_31</map>
+			<map key="go_1">go_31_32</map>
+			<map key="close_0">close_30_31</map>
+			<map key="close_1">close_31_32</map>
+			<map key="get_0">get_30_31</map>
+			<map key="get_1">get_31_32</map>
+			<map key="not_close_0">not_close_30_31</map>
+			<map key="not_close_1">not_close_31_32</map>
+			<map key="ref">ref_31</map>
+			<map key="rel">rel_31</map>
+		</bind>
+		<bind component="moto_template" as="moto32">
+			<map key="go_0">go_31_32</map>
+			<map key="go_1">go_32_33</map>
+			<map key="close_0">close_31_32</map>
+			<map key="close_1">close_32_33</map>
+			<map key="get_0">get_31_32</map>
+			<map key="get_1">get_32_33</map>
+			<map key="not_close_0">not_close_31_32</map>
+			<map key="not_close_1">not_close_32_33</map>
+			<map key="ref">ref_32</map>
+			<map key="rel">rel_32</map>
+		</bind>
+		<bind component="moto_template" as="moto33">
+			<map key="go_0">go_32_33</map>
+			<map key="go_1">go_33_34</map>
+			<map key="close_0">close_32_33</map>
+			<map key="close_1">close_33_34</map>
+			<map key="get_0">get_32_33</map>
+			<map key="get_1">get_33_34</map>
+			<map key="not_close_0">not_close_32_33</map>
+			<map key="not_close_1">not_close_33_34</map>
+			<map key="ref">ref_33</map>
+			<map key="rel">rel_33</map>
+		</bind>
+		<bind component="moto_template" as="moto34">
+			<map key="go_0">go_33_34</map>
+			<map key="go_1">go_34_35</map>
+			<map key="close_0">close_33_34</map>
+			<map key="close_1">close_34_35</map>
+			<map key="get_0">get_33_34</map>
+			<map key="get_1">get_34_35</map>
+			<map key="not_close_0">not_close_33_34</map>
+			<map key="not_close_1">not_close_34_35</map>
+			<map key="ref">ref_34</map>
+			<map key="rel">rel_34</map>
+		</bind>
+		<bind component="moto_template" as="moto35">
+			<map key="go_0">go_34_35</map>
+			<map key="go_1">go_35_36</map>
+			<map key="close_0">close_34_35</map>
+			<map key="close_1">close_35_36</map>
+			<map key="get_0">get_34_35</map>
+			<map key="get_1">get_35_36</map>
+			<map key="not_close_0">not_close_34_35</map>
+			<map key="not_close_1">not_close_35_36</map>
+			<map key="ref">ref_35</map>
+			<map key="rel">rel_35</map>
+		</bind>
+		<bind component="moto_template" as="moto36">
+			<map key="go_0">go_35_36</map>
+			<map key="go_1">go_36_37</map>
+			<map key="close_0">close_35_36</map>
+			<map key="close_1">close_36_37</map>
+			<map key="get_0">get_35_36</map>
+			<map key="get_1">get_36_37</map>
+			<map key="not_close_0">not_close_35_36</map>
+			<map key="not_close_1">not_close_36_37</map>
+			<map key="ref">ref_36</map>
+			<map key="rel">rel_36</map>
+		</bind>
+		<bind component="moto_template" as="moto37">
+			<map key="go_0">go_36_37</map>
+			<map key="go_1">go_37_38</map>
+			<map key="close_0">close_36_37</map>
+			<map key="close_1">close_37_38</map>
+			<map key="get_0">get_36_37</map>
+			<map key="get_1">get_37_38</map>
+			<map key="not_close_0">not_close_36_37</map>
+			<map key="not_close_1">not_close_37_38</map>
+			<map key="ref">ref_37</map>
+			<map key="rel">rel_37</map>
+		</bind>
+		<bind component="moto_template" as="moto38">
+			<map key="go_0">go_37_38</map>
+			<map key="go_1">go_38_39</map>
+			<map key="close_0">close_37_38</map>
+			<map key="close_1">close_38_39</map>
+			<map key="get_0">get_37_38</map>
+			<map key="get_1">get_38_39</map>
+			<map key="not_close_0">not_close_37_38</map>
+			<map key="not_close_1">not_close_38_39</map>
+			<map key="ref">ref_38</map>
+			<map key="rel">rel_38</map>
+		</bind>
+		<bind component="moto_template" as="moto39">
+			<map key="go_0">go_38_39</map>
+			<map key="go_1">go_39_40</map>
+			<map key="close_0">close_38_39</map>
+			<map key="close_1">close_39_40</map>
+			<map key="get_0">get_38_39</map>
+			<map key="get_1">get_39_40</map>
+			<map key="not_close_0">not_close_38_39</map>
+			<map key="not_close_1">not_close_39_40</map>
+			<map key="ref">ref_39</map>
+			<map key="rel">rel_39</map>
+		</bind>
+		<bind component="moto_template" as="moto40">
+			<map key="go_0">go_39_40</map>
+			<map key="go_1">go_40_41</map>
+			<map key="close_0">close_39_40</map>
+			<map key="close_1">close_40_41</map>
+			<map key="get_0">get_39_40</map>
+			<map key="get_1">get_40_41</map>
+			<map key="not_close_0">not_close_39_40</map>
+			<map key="not_close_1">not_close_40_41</map>
+			<map key="ref">ref_40</map>
+			<map key="rel">rel_40</map>
+		</bind>
+		<bind component="moto_template" as="moto41">
+			<map key="go_0">go_40_41</map>
+			<map key="go_1">go_41_42</map>
+			<map key="close_0">close_40_41</map>
+			<map key="close_1">close_41_42</map>
+			<map key="get_0">get_40_41</map>
+			<map key="get_1">get_41_42</map>
+			<map key="not_close_0">not_close_40_41</map>
+			<map key="not_close_1">not_close_41_42</map>
+			<map key="ref">ref_41</map>
+			<map key="rel">rel_41</map>
+		</bind>
+		<bind component="moto_template" as="moto42">
+			<map key="go_0">go_41_42</map>
+			<map key="go_1">go_42_43</map>
+			<map key="close_0">close_41_42</map>
+			<map key="close_1">close_42_43</map>
+			<map key="get_0">get_41_42</map>
+			<map key="get_1">get_42_43</map>
+			<map key="not_close_0">not_close_41_42</map>
+			<map key="not_close_1">not_close_42_43</map>
+			<map key="ref">ref_42</map>
+			<map key="rel">rel_42</map>
+		</bind>
+		<bind component="moto_template" as="moto43">
+			<map key="go_0">go_42_43</map>
+			<map key="go_1">go_43_44</map>
+			<map key="close_0">close_42_43</map>
+			<map key="close_1">close_43_44</map>
+			<map key="get_0">get_42_43</map>
+			<map key="get_1">get_43_44</map>
+			<map key="not_close_0">not_close_42_43</map>
+			<map key="not_close_1">not_close_43_44</map>
+			<map key="ref">ref_43</map>
+			<map key="rel">rel_43</map>
+		</bind>
+		<bind component="moto_template" as="moto44">
+			<map key="go_0">go_43_44</map>
+			<map key="go_1">go_44_45</map>
+			<map key="close_0">close_43_44</map>
+			<map key="close_1">close_44_45</map>
+			<map key="get_0">get_43_44</map>
+			<map key="get_1">get_44_45</map>
+			<map key="not_close_0">not_close_43_44</map>
+			<map key="not_close_1">not_close_44_45</map>
+			<map key="ref">ref_44</map>
+			<map key="rel">rel_44</map>
+		</bind>
+		<bind component="moto_template" as="moto45">
+			<map key="go_0">go_44_45</map>
+			<map key="go_1">go_45_46</map>
+			<map key="close_0">close_44_45</map>
+			<map key="close_1">close_45_46</map>
+			<map key="get_0">get_44_45</map>
+			<map key="get_1">get_45_46</map>
+			<map key="not_close_0">not_close_44_45</map>
+			<map key="not_close_1">not_close_45_46</map>
+			<map key="ref">ref_45</map>
+			<map key="rel">rel_45</map>
+		</bind>
+		<bind component="moto_template" as="moto46">
+			<map key="go_0">go_45_46</map>
+			<map key="go_1">go_46_47</map>
+			<map key="close_0">close_45_46</map>
+			<map key="close_1">close_46_47</map>
+			<map key="get_0">get_45_46</map>
+			<map key="get_1">get_46_47</map>
+			<map key="not_close_0">not_close_45_46</map>
+			<map key="not_close_1">not_close_46_47</map>
+			<map key="ref">ref_46</map>
+			<map key="rel">rel_46</map>
+		</bind>
+		<bind component="moto_template" as="moto47">
+			<map key="go_0">go_46_47</map>
+			<map key="go_1">go_47_48</map>
+			<map key="close_0">close_46_47</map>
+			<map key="close_1">close_47_48</map>
+			<map key="get_0">get_46_47</map>
+			<map key="get_1">get_47_48</map>
+			<map key="not_close_0">not_close_46_47</map>
+			<map key="not_close_1">not_close_47_48</map>
+			<map key="ref">ref_47</map>
+			<map key="rel">rel_47</map>
+		</bind>
+		<bind component="moto_template" as="moto48">
+			<map key="go_0">go_47_48</map>
+			<map key="go_1">go_48_49</map>
+			<map key="close_0">close_47_48</map>
+			<map key="close_1">close_48_49</map>
+			<map key="get_0">get_47_48</map>
+			<map key="get_1">get_48_49</map>
+			<map key="not_close_0">not_close_47_48</map>
+			<map key="not_close_1">not_close_48_49</map>
+			<map key="ref">ref_48</map>
+			<map key="rel">rel_48</map>
+		</bind>
+		<bind component="moto_template" as="moto49">
+			<map key="go_0">go_48_49</map>
+			<map key="go_1">go_49_50</map>
+			<map key="close_0">close_48_49</map>
+			<map key="close_1">close_49_50</map>
+			<map key="get_0">get_48_49</map>
+			<map key="get_1">get_49_50</map>
+			<map key="not_close_0">not_close_48_49</map>
+			<map key="not_close_1">not_close_49_50</map>
+			<map key="ref">ref_49</map>
+			<map key="rel">rel_49</map>
+		</bind>
+		<bind component="moto_template" as="moto50">
+			<map key="go_0">go_49_50</map>
+			<map key="go_1">go_50_51</map>
+			<map key="close_0">close_49_50</map>
+			<map key="close_1">close_50_51</map>
+			<map key="get_0">get_49_50</map>
+			<map key="get_1">get_50_51</map>
+			<map key="not_close_0">not_close_49_50</map>
+			<map key="not_close_1">not_close_50_51</map>
+			<map key="ref">ref_50</map>
+			<map key="rel">rel_50</map>
+		</bind>
+		<bind component="moto_template" as="moto51">
+			<map key="go_0">go_50_51</map>
+			<map key="go_1">go_51_52</map>
+			<map key="close_0">close_50_51</map>
+			<map key="close_1">close_51_52</map>
+			<map key="get_0">get_50_51</map>
+			<map key="get_1">get_51_52</map>
+			<map key="not_close_0">not_close_50_51</map>
+			<map key="not_close_1">not_close_51_52</map>
+			<map key="ref">ref_51</map>
+			<map key="rel">rel_51</map>
+		</bind>
+		<bind component="moto_template" as="moto52">
+			<map key="go_0">go_51_52</map>
+			<map key="go_1">go_52_53</map>
+			<map key="close_0">close_51_52</map>
+			<map key="close_1">close_52_53</map>
+			<map key="get_0">get_51_52</map>
+			<map key="get_1">get_52_53</map>
+			<map key="not_close_0">not_close_51_52</map>
+			<map key="not_close_1">not_close_52_53</map>
+			<map key="ref">ref_52</map>
+			<map key="rel">rel_52</map>
+		</bind>
+		<bind component="moto_template" as="moto53">
+			<map key="go_0">go_52_53</map>
+			<map key="go_1">go_53_54</map>
+			<map key="close_0">close_52_53</map>
+			<map key="close_1">close_53_54</map>
+			<map key="get_0">get_52_53</map>
+			<map key="get_1">get_53_54</map>
+			<map key="not_close_0">not_close_52_53</map>
+			<map key="not_close_1">not_close_53_54</map>
+			<map key="ref">ref_53</map>
+			<map key="rel">rel_53</map>
+		</bind>
+		<bind component="moto_template" as="moto54">
+			<map key="go_0">go_53_54</map>
+			<map key="go_1">go_54_55</map>
+			<map key="close_0">close_53_54</map>
+			<map key="close_1">close_54_55</map>
+			<map key="get_0">get_53_54</map>
+			<map key="get_1">get_54_55</map>
+			<map key="not_close_0">not_close_53_54</map>
+			<map key="not_close_1">not_close_54_55</map>
+			<map key="ref">ref_54</map>
+			<map key="rel">rel_54</map>
+		</bind>
+		<bind component="moto_template" as="moto55">
+			<map key="go_0">go_54_55</map>
+			<map key="go_1">go_55_56</map>
+			<map key="close_0">close_54_55</map>
+			<map key="close_1">close_55_56</map>
+			<map key="get_0">get_54_55</map>
+			<map key="get_1">get_55_56</map>
+			<map key="not_close_0">not_close_54_55</map>
+			<map key="not_close_1">not_close_55_56</map>
+			<map key="ref">ref_55</map>
+			<map key="rel">rel_55</map>
+		</bind>
+		<bind component="moto_template" as="moto56">
+			<map key="go_0">go_55_56</map>
+			<map key="go_1">go_56_57</map>
+			<map key="close_0">close_55_56</map>
+			<map key="close_1">close_56_57</map>
+			<map key="get_0">get_55_56</map>
+			<map key="get_1">get_56_57</map>
+			<map key="not_close_0">not_close_55_56</map>
+			<map key="not_close_1">not_close_56_57</map>
+			<map key="ref">ref_56</map>
+			<map key="rel">rel_56</map>
+		</bind>
+		<bind component="moto_template" as="moto57">
+			<map key="go_0">go_56_57</map>
+			<map key="go_1">go_57_58</map>
+			<map key="close_0">close_56_57</map>
+			<map key="close_1">close_57_58</map>
+			<map key="get_0">get_56_57</map>
+			<map key="get_1">get_57_58</map>
+			<map key="not_close_0">not_close_56_57</map>
+			<map key="not_close_1">not_close_57_58</map>
+			<map key="ref">ref_57</map>
+			<map key="rel">rel_57</map>
+		</bind>
+		<bind component="moto_template" as="moto58">
+			<map key="go_0">go_57_58</map>
+			<map key="go_1">go_58_59</map>
+			<map key="close_0">close_57_58</map>
+			<map key="close_1">close_58_59</map>
+			<map key="get_0">get_57_58</map>
+			<map key="get_1">get_58_59</map>
+			<map key="not_close_0">not_close_57_58</map>
+			<map key="not_close_1">not_close_58_59</map>
+			<map key="ref">ref_58</map>
+			<map key="rel">rel_58</map>
+		</bind>
+		<bind component="moto_template" as="moto59">
+			<map key="go_0">go_58_59</map>
+			<map key="go_1">go_59_60</map>
+			<map key="close_0">close_58_59</map>
+			<map key="close_1">close_59_60</map>
+			<map key="get_0">get_58_59</map>
+			<map key="get_1">get_59_60</map>
+			<map key="not_close_0">not_close_58_59</map>
+			<map key="not_close_1">not_close_59_60</map>
+			<map key="ref">ref_59</map>
+			<map key="rel">rel_59</map>
+		</bind>
+		<bind component="moto_template" as="moto60">
+			<map key="go_0">go_59_60</map>
+			<map key="go_1">go_60_61</map>
+			<map key="close_0">close_59_60</map>
+			<map key="close_1">close_60_61</map>
+			<map key="get_0">get_59_60</map>
+			<map key="get_1">get_60_61</map>
+			<map key="not_close_0">not_close_59_60</map>
+			<map key="not_close_1">not_close_60_61</map>
+			<map key="ref">ref_60</map>
+			<map key="rel">rel_60</map>
+		</bind>
+		<bind component="moto_template" as="moto61">
+			<map key="go_0">go_60_61</map>
+			<map key="go_1">go_61_62</map>
+			<map key="close_0">close_60_61</map>
+			<map key="close_1">close_61_62</map>
+			<map key="get_0">get_60_61</map>
+			<map key="get_1">get_61_62</map>
+			<map key="not_close_0">not_close_60_61</map>
+			<map key="not_close_1">not_close_61_62</map>
+			<map key="ref">ref_61</map>
+			<map key="rel">rel_61</map>
+		</bind>
+		<bind component="moto_template" as="moto62">
+			<map key="go_0">go_61_62</map>
+			<map key="go_1">go_62_63</map>
+			<map key="close_0">close_61_62</map>
+			<map key="close_1">close_62_63</map>
+			<map key="get_0">get_61_62</map>
+			<map key="get_1">get_62_63</map>
+			<map key="not_close_0">not_close_61_62</map>
+			<map key="not_close_1">not_close_62_63</map>
+			<map key="ref">ref_62</map>
+			<map key="rel">rel_62</map>
+		</bind>
+		<bind component="moto_template" as="moto63">
+			<map key="go_0">go_62_63</map>
+			<map key="go_1">go_63_64</map>
+			<map key="close_0">close_62_63</map>
+			<map key="close_1">close_63_64</map>
+			<map key="get_0">get_62_63</map>
+			<map key="get_1">get_63_64</map>
+			<map key="not_close_0">not_close_62_63</map>
+			<map key="not_close_1">not_close_63_64</map>
+			<map key="ref">ref_63</map>
+			<map key="rel">rel_63</map>
+		</bind>
+		<bind component="moto_template" as="moto64">
+			<map key="go_0">go_63_64</map>
+			<map key="go_1">go_64_65</map>
+			<map key="close_0">close_63_64</map>
+			<map key="close_1">close_64_65</map>
+			<map key="get_0">get_63_64</map>
+			<map key="get_1">get_64_65</map>
+			<map key="not_close_0">not_close_63_64</map>
+			<map key="not_close_1">not_close_64_65</map>
+			<map key="ref">ref_64</map>
+			<map key="rel">rel_64</map>
+		</bind>
+		<bind component="moto_template" as="moto65">
+			<map key="go_0">go_64_65</map>
+			<map key="go_1">go_65_66</map>
+			<map key="close_0">close_64_65</map>
+			<map key="close_1">close_65_66</map>
+			<map key="get_0">get_64_65</map>
+			<map key="get_1">get_65_66</map>
+			<map key="not_close_0">not_close_64_65</map>
+			<map key="not_close_1">not_close_65_66</map>
+			<map key="ref">ref_65</map>
+			<map key="rel">rel_65</map>
+		</bind>
+		<bind component="moto_template" as="moto66">
+			<map key="go_0">go_65_66</map>
+			<map key="go_1">go_66_67</map>
+			<map key="close_0">close_65_66</map>
+			<map key="close_1">close_66_67</map>
+			<map key="get_0">get_65_66</map>
+			<map key="get_1">get_66_67</map>
+			<map key="not_close_0">not_close_65_66</map>
+			<map key="not_close_1">not_close_66_67</map>
+			<map key="ref">ref_66</map>
+			<map key="rel">rel_66</map>
+		</bind>
+		<bind component="moto_template" as="moto67">
+			<map key="go_0">go_66_67</map>
+			<map key="go_1">go_67_68</map>
+			<map key="close_0">close_66_67</map>
+			<map key="close_1">close_67_68</map>
+			<map key="get_0">get_66_67</map>
+			<map key="get_1">get_67_68</map>
+			<map key="not_close_0">not_close_66_67</map>
+			<map key="not_close_1">not_close_67_68</map>
+			<map key="ref">ref_67</map>
+			<map key="rel">rel_67</map>
+		</bind>
+		<bind component="moto_template" as="moto68">
+			<map key="go_0">go_67_68</map>
+			<map key="go_1">go_68_69</map>
+			<map key="close_0">close_67_68</map>
+			<map key="close_1">close_68_69</map>
+			<map key="get_0">get_67_68</map>
+			<map key="get_1">get_68_69</map>
+			<map key="not_close_0">not_close_67_68</map>
+			<map key="not_close_1">not_close_68_69</map>
+			<map key="ref">ref_68</map>
+			<map key="rel">rel_68</map>
+		</bind>
+		<bind component="moto_template" as="moto69">
+			<map key="go_0">go_68_69</map>
+			<map key="go_1">go_69_70</map>
+			<map key="close_0">close_68_69</map>
+			<map key="close_1">close_69_70</map>
+			<map key="get_0">get_68_69</map>
+			<map key="get_1">get_69_70</map>
+			<map key="not_close_0">not_close_68_69</map>
+			<map key="not_close_1">not_close_69_70</map>
+			<map key="ref">ref_69</map>
+			<map key="rel">rel_69</map>
+		</bind>
+		<bind component="moto_template" as="moto70">
+			<map key="go_0">go_69_70</map>
+			<map key="go_1">go_70_71</map>
+			<map key="close_0">close_69_70</map>
+			<map key="close_1">close_70_71</map>
+			<map key="get_0">get_69_70</map>
+			<map key="get_1">get_70_71</map>
+			<map key="not_close_0">not_close_69_70</map>
+			<map key="not_close_1">not_close_70_71</map>
+			<map key="ref">ref_70</map>
+			<map key="rel">rel_70</map>
+		</bind>
+		<bind component="moto_template" as="moto71">
+			<map key="go_0">go_70_71</map>
+			<map key="go_1">go_71_72</map>
+			<map key="close_0">close_70_71</map>
+			<map key="close_1">close_71_72</map>
+			<map key="get_0">get_70_71</map>
+			<map key="get_1">get_71_72</map>
+			<map key="not_close_0">not_close_70_71</map>
+			<map key="not_close_1">not_close_71_72</map>
+			<map key="ref">ref_71</map>
+			<map key="rel">rel_71</map>
+		</bind>
+		<bind component="moto_template" as="moto72">
+			<map key="go_0">go_71_72</map>
+			<map key="go_1">go_72_73</map>
+			<map key="close_0">close_71_72</map>
+			<map key="close_1">close_72_73</map>
+			<map key="get_0">get_71_72</map>
+			<map key="get_1">get_72_73</map>
+			<map key="not_close_0">not_close_71_72</map>
+			<map key="not_close_1">not_close_72_73</map>
+			<map key="ref">ref_72</map>
+			<map key="rel">rel_72</map>
+		</bind>
+		<bind component="moto_template" as="moto73">
+			<map key="go_0">go_72_73</map>
+			<map key="go_1">go_73_74</map>
+			<map key="close_0">close_72_73</map>
+			<map key="close_1">close_73_74</map>
+			<map key="get_0">get_72_73</map>
+			<map key="get_1">get_73_74</map>
+			<map key="not_close_0">not_close_72_73</map>
+			<map key="not_close_1">not_close_73_74</map>
+			<map key="ref">ref_73</map>
+			<map key="rel">rel_73</map>
+		</bind>
+		<bind component="moto_template" as="moto74">
+			<map key="go_0">go_73_74</map>
+			<map key="go_1">go_74_75</map>
+			<map key="close_0">close_73_74</map>
+			<map key="close_1">close_74_75</map>
+			<map key="get_0">get_73_74</map>
+			<map key="get_1">get_74_75</map>
+			<map key="not_close_0">not_close_73_74</map>
+			<map key="not_close_1">not_close_74_75</map>
+			<map key="ref">ref_74</map>
+			<map key="rel">rel_74</map>
+		</bind>
+	</component>
+</sspaceex>
